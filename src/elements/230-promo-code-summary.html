@@ -19,6 +19,25 @@
   ["' 아꼈어요'", "' saved'"],
   ["' 결제하기'", "' · Pay now'"]
 ]} -->
+<!-- @zh {"title": "输入优惠码会重新算价的订单摘要", "summary": "结账页的订单摘要里，点“有优惠码吗？”，下面会滑出一个输入框。输错了码，输入框会左右摇头并出现红色提示；输对了，输入框会收成一枚优惠码小 pill，折扣行滑进来，总价往下数，旧金额被划掉，还会弹出一个“你省了”小 pill。点 pill 上的 × 可以全部恢复。", "hint": "点“有优惠码吗？”，输入 WELCOME10","map":[
+  [">주문 요약<", ">订单摘要<"],
+  [">상품 2개<", ">2 件商品<"],
+  ["var IT = [['린넨 셔츠', '화이트 · M', 39000], ['코튼 토트백', '내추럴', 18000]], SHIP = 3000", "var IT = [['亚麻衬衫', '白色 · M', 39], ['棉布托特包', '原色', 18]], SHIP = 3"],
+  ["function won(v) { return Math.round(v).toLocaleString('en-US') + '원'; }", "function won(v) { return '¥' + v.toFixed(2); }"],
+  [">할인 코드가 있나요?<", ">有优惠码吗？<"],
+  ["aria-label=\"할인 코드\"", "aria-label=\"优惠码\""],
+  ["placeholder=\"코드 입력\"", "placeholder=\"输入优惠码\""],
+  [">적용<", ">使用<"],
+  ["'사용할 수 없는 코드예요'", "'这个优惠码不可用'"],
+  ["' · 10% 할인'", "' · 9 折'"],
+  ["aria-label=\"할인 코드 빼기\"", "aria-label=\"移除优惠码\""],
+  [">상품 금액<", ">商品小计<"],
+  [">배송비<", ">运费<"],
+  [">할인<", ">优惠<"],
+  [">결제 금액<", ">应付总额<"],
+  ["' 아꼈어요'", "' 已省'"],
+  ["' 결제하기'", "' · 立即支付'"]
+]} -->
 <style>
 .u230{position:relative;width:300px;height:480px;border-radius:32px;overflow:hidden;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);color:var(--ux-ink)}
 .u230-hd{display:flex;align-items:baseline;justify-content:space-between;padding:24px 20px 0}

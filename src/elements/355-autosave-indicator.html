@@ -1,5 +1,5 @@
 <!-- @meta {"title":"저장 상태를 알려 주는 구름 표시","category":"폼·입력","summary":"글을 쓰기 시작하면 구름 속 점 세 개가 오르내리며 ‘저장 중’을 알리고, 손을 멈추면 점이 체크로 바뀌며 ‘방금 저장됨’이 됩니다. 시간이 흐르면 ‘10초 전 저장’처럼 상대 시간이 바뀌고, 오프라인으로 바꾸면 구름에 사선이 그어져 ‘기기에 임시 저장’이 됩니다. 다시 연결되면 화살표가 돌며 동기화합니다.","hint":"본문에 글을 써 보고, 아래 스위치로 오프라인을 켰다 꺼 보세요","shape":"square","tags":["autosave","status","editor","offline","sync"]} -->
-<!-- @demo [["wait",900],["type",".u355-ta",0,{"ko":" 오늘 정한 것들을 정리합니다.","en":" Summing up what we decided today."},55],["wait",2200],["tap",".u355-off",0,{"after":700}],["type",".u355-ta",0,{"ko":" 표지 색은 남색.","en":" Cover in navy."},60],["wait",1600],["tap",".u355-off",0,{"after":2600}]] -->
+<!-- @demo [["wait",900],["type",".u355-ta",0,{"ko":" 오늘 정한 것들을 정리합니다.","en":" Summing up what we decided today.","zh":" 汇总今天定下来的事。"},55],["wait",2200],["tap",".u355-off",0,{"after":700}],["type",".u355-ta",0,{"ko":" 표지 색은 남색.","en":" Cover in navy.","zh":" 封面用藏青色。"},60],["wait",1600],["tap",".u355-off",0,{"after":2600}]] -->
 <!-- @en {"title":"Cloud autosave indicator","summary":"Start typing and three dots bob inside a cloud to show ‘Saving’; pause and they turn into a check that reads ‘Saved just now’. As time passes it switches to relative times like ‘Saved 10s ago’, and going offline draws a slash through the cloud with ‘Saved on this device’. Reconnect and a spinning arrow syncs it back.","hint":"Type in the body, and toggle offline with the switch below","map":[
   ["<textarea class=\"u355-ta\" aria-label=\"본문\">다음 주 출시 회의 메모.</textarea>", "<textarea class=\"u355-ta\" aria-label=\"Body\">Notes for next week’s launch meeting.</textarea>"],
   ["value=\"출시 회의\"", "value=\"Launch meeting\""],
@@ -13,6 +13,20 @@
   [">오프라인으로 작업<", ">Work offline<"],
   [">모두 저장됨<", ">All saved<"],
   [">방금 저장됨<", ">Saved just now<"]
+]} -->
+<!-- @zh {"title":"云端自动保存指示","summary":"开始打字，云朵里的三个小点上下跳动，表示「保存中」；停下手，圆点变成对勾，显示「刚刚保存」。时间久了会变成「10 秒前保存」这样的相对时间；切换到离线，云朵上划一道斜线，变成「已保存在本机」。重新联网后，箭头转起来重新同步。","hint":"在正文里打几个字，再用下面的开关切换离线试试","map":[
+  ["<textarea class=\"u355-ta\" aria-label=\"본문\">다음 주 출시 회의 메모.</textarea>", "<textarea class=\"u355-ta\" aria-label=\"正文\">下周发布会议笔记。</textarea>"],
+  ["value=\"출시 회의\"", "value=\"发布会议\""],
+  ["aria-label=\"제목\"", "aria-label=\"标题\""],
+  ["'저장 중'", "'保存中'"],
+  ["'방금 저장됨'", "'刚刚保存'"],
+  ["s + '초 전 저장'", "s + '秒前保存'"],
+  ["Math.floor(s / 60) + '분 전 저장'", "Math.floor(s / 60) + '分钟前保存'"],
+  ["'기기에 임시 저장'", "'已保存在本机'"],
+  ["'동기화 중'", "'同步中'"],
+  [">오프라인으로 작업<", ">离线工作<"],
+  [">모두 저장됨<", ">全部已保存<"],
+  [">방금 저장됨<", ">刚刚保存<"]
 ]} -->
 <style>
 .u355{position:relative;width:340px;height:330px;display:flex;flex-direction:column;padding:16px;border-radius:28px;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);overflow:hidden}

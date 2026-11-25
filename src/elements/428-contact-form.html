@@ -1,5 +1,5 @@
 <!-- @meta {"title":"문의 폼","category":"폼·입력","summary":"이름, 이메일, 메시지 칸과 보내기 버튼이 있는 문의 폼입니다. 보내면 폼이 편지 봉투 크기로 접히고, 덮개가 닫히며 하트 봉인이 찍힌 뒤 봉투가 날아갑니다. 그 자리에 ‘보냈어요’가 나타납니다.","hint":"칸을 채우고 보내기를 눌러 보세요. 빈칸으로 보내면 칸이 흔들리며 알려 줍니다","shape":"square","hue":"#22C55E","hue2":"#0EA5E9","tags":["contact","form","envelope","illustration","morph","success-state"]} -->
-<!-- @demo [["wait",600],["type",".u428-nm",0,{"ko":"김민준","en":"Minjun Kim"},110],["type",".u428-em",0,"minjun@velora.kr",45],["type",".u428-tx",0,{"ko":"도입 상담을 받고 싶어요.","en":"We'd love a team demo."},55],["tap",".u428-go",0,{"after":3300}],["reset"]] -->
+<!-- @demo [["wait",600],["type",".u428-nm",0,{"ko":"김민준","en":"Minjun Kim","zh":"Minjun Kim"},110],["type",".u428-em",0,"minjun@velora.kr",45],["type",".u428-tx",0,{"ko":"도입 상담을 받고 싶어요.","en":"We'd love a team demo.","zh":"我们想约一次团队演示。"},55],["tap",".u428-go",0,{"after":3300}],["reset"]] -->
 <!-- @en {"title":"Contact form","summary":"A contact form with name, email and message fields and a Send button. Send it and the form folds down to envelope size, the flap closes, a heart seal stamps on and the envelope flies away, leaving “Sent” in its place.","hint":"Fill in the fields and press Send. Sending with empty fields makes them shake","map":[
   [">이름<", ">Name<"],
   [">이메일<", ">Email<"],
@@ -12,6 +12,19 @@
   [">보냈어요<", ">Sent<"],
   [">보통 1영업일 안에 답장드려요<", ">We usually reply within one business day<"],
   [">다시 쓰기<", ">Write another<"]
+]} -->
+<!-- @zh {"title":"联系表单", "summary":"一张联系表单，有姓名、邮箱和留言框，加一个“发送”按钮。发送后，表单折到信封大小，封口合上，盖上一个爱心封印，信封飞走，原地留下一个“已发送”。", "hint":"填好表单点“发送”。空着发送会让字段抖动", "map":[
+  [">이름<", ">姓名<"],
+  [">이메일<", ">邮箱<"],
+  [">메시지<", ">留言<"],
+  ["placeholder=\"홍길동\"", "placeholder=\"张三\""],
+  ["placeholder=\"무엇이든 물어보세요\"", "placeholder=\"想问什么都可以\""],
+  [">보내기<", ">发送<"],
+  ["'빈칸이나 이메일 형식을 확인해 주세요'", "'请检查空着的字段和邮箱格式'"],
+  ["'보내는 중…'", "'发送中…'"],
+  [">보냈어요<", ">已发送<"],
+  [">보통 1영업일 안에 답장드려요<", ">一般 1 个工作日内回复<"],
+  [">다시 쓰기<", ">再写一封<"]
 ]} -->
 <style>
 .u428{position:relative;width:340px;height:300px;display:grid;place-items:center;color:var(--ux-ink)}

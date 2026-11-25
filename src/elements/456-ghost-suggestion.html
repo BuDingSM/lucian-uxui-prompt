@@ -1,5 +1,5 @@
 <!-- @meta {"title":"고스트 제안","category":"입력·검색","summary":"글을 쓰다 잠깐 멈추면 커서 뒤에 회색 글씨로 나머지 문장이 슬며시 떠오르고, 끝에 작은 Tab 키캡이 붙습니다. Tab을 누르면 먹물이 왼쪽부터 번지듯 회색 글씨가 진한 글씨로 채워지며 내 글이 되고, Esc를 누르면 흐려지며 사라집니다. 제안과 같은 글자를 이어 치면 회색 글씨가 그만큼 줄어듭니다.","hint":"글을 쓰다 멈춘 뒤 Tab으로 받거나 Esc로 지워 보세요","shape":"square","hue":"#3D8BFF","hue2":"#8B5CF6","tags":["autocomplete","ghost-text","inline-suggestion","ai","textarea","keyboard"]} -->
-<!-- @demo [["wait",1100],["erase",".u456-ta",0,"all",40],["wait",450],["type",".u456-ta",0,{"ko":"내일 회의는","en":"Can we move"},130],["wait",1150],["key",".u456-ta",0,"Tab",1,250],["wait",1700],["reset"]] -->
+<!-- @demo [["wait",1100],["erase",".u456-ta",0,"all",40],["wait",450],["type",".u456-ta",0,{"ko":"내일 회의는","en":"Can we move","zh":"明天的会能改到"},130],["wait",1150],["key",".u456-ta",0,"Tab",1,250],["wait",1700],["reset"]] -->
 <!-- @en {"title":"Ghost suggestion","summary":"Pause while writing and the rest of the sentence fades in after the caret in grey, with a tiny Tab keycap at the end. Press Tab and ink spreads from the left as the grey text fills in solid and becomes yours; press Esc and it blurs away. Keep typing the same letters and the grey text shrinks to match.","hint":"Pause while writing, then press Tab to accept or Esc to dismiss","map":[
   ["aria-label=\"메시지\"", "aria-label=\"Message\""],
   ["placeholder=\"메시지를 입력하세요\"", "placeholder=\"Write a message\""],
@@ -10,6 +10,17 @@
   ["'확인 부탁드립니다. 감사합니다!'", "'Please take a look. Thank you!'"],
   ["'제안: {s}'", "'Suggestion: {s}'"],
   ["'제안을 넣었어요'", "'Suggestion accepted'"]
+]} -->
+<!-- @zh {"title":"幽灵联想", "summary":"写字时停一下，句子后半截就以灰色字在光标后面淡出来，末尾还带一个小小的 Tab 键帽。按 Tab，墨水从左漫开，灰字变实，成为你的句子；按 Esc，它就模糊着消失。接着打一样的字母，灰字会跟着缩短。", "hint":"写字时停一下，再按 Tab 接受或按 Esc 取消", "map":[
+  ["aria-label=\"메시지\"", "aria-label=\"消息\""],
+  ["placeholder=\"메시지를 입력하세요\"", "placeholder=\"输入消息\""],
+  [">내일 회의는<", ">明天的会能改到<"],
+  [">Tab 키로 회색 제안을 받고, Esc로 지울 수 있어요<", ">按 Tab 接受灰色建议，按 Esc 取消<"],
+  ["'내일 회의는 오후 3시로 미룰까요?'", "'明天的会能改到下午 3 点吗？'"],
+  ["'자료는 오늘 안에 공유드릴게요.'", "'资料今天之内发给你。'"],
+  ["'확인 부탁드립니다. 감사합니다!'", "'请看一下，谢谢！'"],
+  ["'제안: {s}'", "'建议：{s}'"],
+  ["'제안을 넣었어요'", "'已接受建议'"]
 ]} -->
 <style>
 .u456{position:relative;width:340px;height:300px;display:grid;place-items:center}

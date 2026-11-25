@@ -14,6 +14,7 @@
   ["(ch === '만' || ch === '%' ? ' sm' : '')", "(ch === 'M' || ch === '%' ? ' sm' : '')"],
   ["'실시간 갱신 다시 시작'", "'Resume live updates'"]
 ]} -->
+<!-- @zh {"title": "数字逐位滚动的实时指标", "summary": "大数字的每一位都各自滚动，数值变化时只有不同的位向上或向下转。下面的趋势线每来一个新值就向左挪一步；切换指标时，数字从零滚动上来，折线也变成新的形状。", "hint": "看着数值每隔几秒变化。点下面的访客、转化率或销售额切换指标，右上角的按钮可以暂停实时更新。", "map": [["실시간 방문자", "实时访客"], ["실시간 갱신 멈추기", "暂停实时更新"], ["<span>1시간 전보다</span>", "<span>比 1 小时前</span>"], ["aria-label=\"지표\"", "aria-label=\"指标\""], ["'방문자'", "'访客'"], ["'전환율'", "'转化率'"], ["'실시간 전환율'", "'实时转化率'"], ["'매출'", "'销售额'"], ["'오늘 매출'", "'今日销售额'"], ["fmt: function (v) { return Math.round(v).toLocaleString('ko-KR'); }, tail: '만', head: '₩'", "fmt: function (v) { return (v / 100).toFixed(2); }, tail: '百万', head: '₩'"], ["(ch === '만' || ch === '%' ? ' sm' : '')", "(ch === '百万' || ch === '%' ? ' sm' : '')"], ["'실시간 갱신 다시 시작'", "'恢复实时更新'"]]} -->
 <style>
 .u098{position:relative;width:340px;height:410px;display:flex;flex-direction:column;padding:20px 18px 16px;border-radius:30px;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);overflow:hidden}
 .u098-h{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:750;color:var(--ux-ink-2)}

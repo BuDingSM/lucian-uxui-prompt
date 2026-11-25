@@ -1,5 +1,5 @@
 <!-- @meta {"title":"검색해서 채우는 배송지 주소","category":"폼·입력","summary":"배송지 폼의 주소 칸에 도로명이나 건물 이름을 치면 아래로 결과 목록이 펼쳐지고, 친 글자와 맞는 부분이 진하게 표시됩니다. 결과 하나를 고르면 우편번호와 주소가 제자리에 미끄러져 채워지고, 그 아래 상세 주소 칸이 펼쳐지며 커서가 옮겨 갑니다. 상세 주소까지 쓰면 저장 버튼이 켜집니다.","hint":"주소 칸에 도로명을 쳐 보고 결과 하나를 골라 보세요","shape":"square","tags":["address","search","autocomplete","checkout","form"]} -->
-<!-- @demo [["wait",700],["tap",".u304-q",0,{"after":200}],["type",".u304-q",0,{"ko":"테헤란","en":"Market"},110],["wait",900],["tap",".u304-r",1,{"after":1100}],["type",".u304-dt",0,{"ko":"12층","en":"Suite 1200"},90],["wait",1300],["reset"]] -->
+<!-- @demo [["wait",700],["tap",".u304-q",0,{"after":200}],["type",".u304-q",0,{"ko":"테헤란","en":"Market","zh":"Market"},110],["wait",900],["tap",".u304-r",1,{"after":1100}],["type",".u304-dt",0,{"ko":"12층","en":"Suite 1200","zh":"1200 室"},90],["wait",1300],["reset"]] -->
 <!-- @en {"title":"Search-to-fill shipping address","summary":"Type a street or building name into a shipping form's address field and a result list unfolds below, with the part matching your typing in bold. Choose a result and the postal code and address slide into place, while a detail field opens underneath and the cursor moves to it. Fill in the details and the save button turns on.","hint":"Type a street name into the address field and pick a result","map":[
   [">배송지 추가<", ">Add shipping address<"],
   [">주소<", ">Address<"],
@@ -13,6 +13,57 @@
   [">검색 결과가 없어요<", ">No results<"],
   ["aria-label=\"검색 결과\"", "aria-label=\"Search results\""]
 ]} -->
+<!-- @zh {
+  "title": "搜一下填好收货地址",
+  "summary": "在收货表单的地址栏输入街道或楼名，下方会展开结果列表，和你输入的部分加粗显示。选一条结果，邮编和地址滑入填好，下面还会展开一个详情栏，光标也移过去。填好详情，保存按钮亮起。",
+  "hint": "在地址栏输入街道名，再选一条结果",
+  "map": [
+    [
+      ">배송지 추가<",
+      ">添加收货地址<"
+    ],
+    [
+      ">주소<",
+      ">地址<"
+    ],
+    [
+      "placeholder=\"도로명, 건물명, 지번으로 검색\"",
+      "placeholder=\"按街道、楼名搜索\""
+    ],
+    [
+      "aria-label=\"주소 검색\"",
+      "aria-label=\"搜索地址\""
+    ],
+    [
+      "var A = [['06236', '서울 강남구 테헤란로 152', '강남파이낸스센터'], ['06164', '서울 강남구 테헤란로 521', '파르나스타워'], ['06142', '서울 강남구 테헤란로 129', '강남N타워'], ['04524', '서울 중구 세종대로 110', '서울특별시청']]",
+      "var A = [['94103', '加州旧金山 Market 街 1355 号', '市场广场'], ['94102', '加州旧金山 Market 街 1 号', '斯皮尔大厦'], ['94105', '加州旧金山 Market 街 101 号', '市场一号广场'], ['10001', '纽约西 34 街 20 号', '帝国大厦']]"
+    ],
+    [
+      "'건'",
+      "' 条结果'"
+    ],
+    [
+      ">상세 주소<",
+      ">详细地址<"
+    ],
+    [
+      "placeholder=\"동, 호수, 층\"",
+      "placeholder=\"单元、房号、楼层\""
+    ],
+    [
+      ">저장<",
+      ">保存<"
+    ],
+    [
+      ">검색 결과가 없어요<",
+      ">没有搜索结果<"
+    ],
+    [
+      "aria-label=\"검색 결과\"",
+      "aria-label=\"搜索结果\""
+    ]
+  ]
+} -->
 <style>
 .u304{position:relative;width:340px;height:340px;border-radius:30px;overflow:hidden;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);color:var(--ux-ink)}
 .u304-wr{position:absolute;left:20px;right:20px;top:24px}

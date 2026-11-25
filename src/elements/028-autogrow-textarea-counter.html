@@ -1,5 +1,5 @@
 <!-- @meta {"title":"늘어나는 댓글 입력창","category":"입력·검색","summary":"글을 쓸수록 입력창 높이가 부드럽게 늘어나고, 오른쪽 아래 고리가 남은 글자 수만큼 차오릅니다. 한도에 가까워지면 고리가 주황, 넘으면 빨강으로 바뀌며 남은 수를 숫자로 보여 줍니다.","hint":"입력창에 글을 길게 써 보세요. 140자를 넘기면 게시 버튼이 막힙니다","shape":"square","hue":"#3D8BFF","hue2":"#FFB547","tags":["textarea","autogrow","counter","ring","composer"]} -->
-<!-- @demo [["wait",500],["tap",".u028-ta"],["type",".u028-ta",0,{"ko":" 다만 모바일 화면에서는 280ms 정도가 더 자연스러워 보여서요. 두 값을 나란히 놓고 한 번 더 비교해 보면 좋겠어요. 내일 오전 리뷰 전까지 정리해서 이 스레드에 공유할게요! 다른 의견도 편하게 남겨 주세요. 감사합니다!","en":" On mobile, though, 280ms feels more natural. Let’s compare both side by side before tomorrow’s review — I’ll share it here."},38],["wait",900],["erase",".u028-ta",0,22,60],["wait",900],["tap",".u028-send"],["wait",2000],["reset"]] -->
+<!-- @demo [["wait",500],["tap",".u028-ta"],["type",".u028-ta",0,{"ko":" 다만 모바일 화면에서는 280ms 정도가 더 자연스러워 보여서요. 두 값을 나란히 놓고 한 번 더 비교해 보면 좋겠어요. 내일 오전 리뷰 전까지 정리해서 이 스레드에 공유할게요! 다른 의견도 편하게 남겨 주세요. 감사합니다!","en":" On mobile, though, 280ms feels more natural. Let’s compare both side by side before tomorrow’s review — I’ll share it here.","zh":" 不过在手机上，280ms 感觉更自然。明天评审前，咱们把两个值并排对比一下，我会分享到这个帖子里。"},38],["wait",900],["erase",".u028-ta",0,22,60],["wait",900],["tap",".u028-send"],["wait",2000],["reset"]] -->
 <!-- @en {"title":"Auto-growing reply box","summary":"The box grows smoothly as you write, and the ring in the bottom-right fills as you use up characters. Near the limit the ring turns orange, past it red, and it shows how many are left as a number.","hint":"Write a long reply. Past 140 characters the Post button is blocked","map":[
   ["윤서준", "Seojun Yoon"],
   ["시안 3번의 전환 속도가 조금 빠른 것 같아요. 의견 있으면 남겨 주세요.", "The transition in concept 3 feels a little fast. Any thoughts?"],
@@ -14,6 +14,7 @@
   ["게시됨", "Posted"],
   ["게시", "Post"]
 ]} -->
+<!-- @zh {"title": "自动长高的回复框", "summary": "边写边长，右下角的圆环会随着字数填满。接近上限变橙色，超了变红，还会用数字告诉你还剩多少字。", "hint": "写一条长回复，超过 140 字后「发布」按钮会被禁用", "map": [["윤서준", "Seojun Yoon"], ["시안 3번의 전환 속도가 조금 빠른 것 같아요. 의견 있으면 남겨 주세요.", "3 号方案的转场速度好像有点快，大家有想法请留言。"], ["답글을 남겨 보세요", "写一条回复"], ["\"답글\"", "\"回复\""], ["좋아요! 200ms로 맞춰 볼게요.", "好啊！我按 200ms 试试。"], ["이미지 첨부", "添加图片"], ["\"멘션\"", "\"提到\""], ["rest + '자 남았어요'", "rest + ' 字剩余'"], ["글자 수를 넘었어요", "超出字数了"], ["답글을 게시했어요", "回复已发布"], ["게시됨", "已发布"], ["게시", "发布"]]} -->
 <style>
 .u028{position:relative;width:350px;height:300px;display:flex;flex-direction:column;justify-content:center}
 .u028-thread{display:flex;gap:10px;margin-bottom:14px}

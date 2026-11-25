@@ -1,5 +1,5 @@
 <!-- @meta {"title":"맨 위로 + 상담 버튼","category":"버튼","summary":"오른쪽 아래에 떠 있는 두 버튼입니다. 위쪽 ‘맨 위로’ 버튼은 읽은 만큼 링이 차 있고, 누르면 화살표가 위로 튀어 오르며 링이 풀린 뒤 잠시 숨습니다. 아래쪽 말풍선 버튼은 누르면 그 자리에서 작은 상담 창으로 부풀어 오르고, 닫으면 다시 동그란 버튼으로 줄어듭니다.","hint":"맨 위로 버튼과 말풍선 버튼을 눌러 보세요","shape":"square","hue":"#6366F1","hue2":"#22C3A6","tags":["back-to-top","fab","support","chat","morph","progress-ring"]} -->
-<!-- @demo [["wait",700],["tap",".u450-top",0,{"after":2300}],["tap",".u450-open",0,{"after":1100}],["type",".u450-in",0,{"ko":"배송은 언제 오나요?","en":"When will it ship?"},55],["wait",450],["tap",".u450-x",0,{"after":1200}]] -->
+<!-- @demo [["wait",700],["tap",".u450-top",0,{"after":2300}],["tap",".u450-open",0,{"after":1100}],["type",".u450-in",0,{"ko":"배송은 언제 오나요?","en":"When will it ship?","zh":"什么时候发货？"},55],["wait",450],["tap",".u450-x",0,{"after":1200}]] -->
 <!-- @en {"title":"Back to top + support buttons","summary":"Two buttons floating in the bottom-right corner. The upper Back to top button carries a ring filled as far as you have read; press it and the arrow shoots up as the ring unwinds, then it tucks away for a moment. The lower chat bubble swells into a compact support panel right where it sits, and shrinks back into a round button when closed.","hint":"Press Back to top, then the chat bubble","map":[
   ["aria-label=\"맨 위로\"", "aria-label=\"Back to top\""],
   ["aria-label=\"상담 열기\"", "aria-label=\"Open support chat\""],
@@ -11,6 +11,18 @@
   [">보통 5분 안에 답해요<", ">Usually replies in 5 min<"],
   [">안녕하세요! 궁금한 점을 남겨 주시면 바로 도와드릴게요.<", ">Hi there! Leave your question and we’ll help right away.<"],
   ["placeholder=\"메시지를 입력하세요\"", "placeholder=\"Type a message\""]
+]} -->
+<!-- @zh {"title":"回到顶部 + 客服按钮", "summary":"右下角飘着两个按钮。上面的“回到顶部”带一圈进度环，标着你读了多远；点一下，箭头向上射出，圆环松开，按钮先藏一会儿。下面的聊天气泡会就地胀成一个紧凑的客服面板，关掉又缩回圆形按钮。", "hint":"先点“回到顶部”，再点聊天气泡", "map":[
+  ["aria-label=\"맨 위로\"", "aria-label=\"回到顶部\""],
+  ["aria-label=\"상담 열기\"", "aria-label=\"打开客服聊天\""],
+  ["aria-label=\"상담\"", "aria-label=\"客服\""],
+  ["aria-label=\"상담 닫기\"", "aria-label=\"关闭客服聊天\""],
+  ["aria-label=\"보내기\"", "aria-label=\"发送\""],
+  ["aria-label=\"메시지\"", "aria-label=\"消息\""],
+  [">무엇을 도와드릴까요?<", ">有什么可以帮你的吗？<"],
+  [">보통 5분 안에 답해요<", ">一般 5 分钟内回复<"],
+  [">안녕하세요! 궁금한 점을 남겨 주시면 바로 도와드릴게요.<", ">你好！留下你的问题，我们马上帮你。<"],
+  ["placeholder=\"메시지를 입력하세요\"", "placeholder=\"输入消息\""]
 ]} -->
 <style>
 .u450{position:relative;width:340px;height:300px}

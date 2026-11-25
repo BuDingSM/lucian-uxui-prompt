@@ -8,14 +8,14 @@
 <link rel="icon" href="data:,">
 <script>
 /* 첫 화면을 그리기 전에 테마와 언어를 정합니다.
-   언어: 저장한 값 → 한국 시간대(Asia/Seoul)이거나 브라우저 첫 언어가 한국어면 한국어 → 그 밖에는 영어 */
+   언어: 저장한 값 → 한국 시간대(Asia/Seoul)이거나 브라우저 첫 언어가 한국어면 한국어 → 중국어 브라우저(언어가 zh로 시작하거나 중국 시간대)이면 중국어 → 그 밖에는 영어 */
 (function(){var r=document.documentElement;r.classList.add('js');
 r.setAttribute('data-theme','dark');try{var s=localStorage.getItem('ux-gallery-theme');if(s==='dark'||s==='light')r.setAttribute('data-theme',s)}catch(e){}
 var l=null;try{l=localStorage.getItem('ux-gallery-lang')}catch(e){}
-if(l!=='ko'&&l!=='en'){var tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}
+if(l!=='ko'&&l!=='en'&&l!=='zh'){var tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}
 var first=(navigator.languages&&navigator.languages[0])||navigator.language||'';
-l=(tz==='Asia/Seoul'||/^ko\b/i.test(first))?'ko':'en'}
-r.setAttribute('lang',l);if(l==='en')r.classList.add('i18n-wait')})();
+l=(tz==='Asia/Seoul'||/^ko\b/i.test(first))?'ko':(/^zh\b/i.test(first)||tz==='Asia/Shanghai'||tz==='Asia/Taipei'||tz==='Asia/Hong_Kong'||tz==='Asia/Macau')?'zh':'en'}
+r.setAttribute('lang',l);if(l==='en'||l==='zh')r.classList.add('i18n-wait')})();
 </script>
 <style>
 /*@TOKENS@*/
@@ -60,7 +60,7 @@ r.setAttribute('lang',l);if(l==='en')r.classList.add('i18n-wait')})();
     <div class="g-head-r">
       <button class="g-link g-link--skill" type="button" id="to-skill" data-i18n="skillBtn">에이전트 스킬</button>
       <button class="g-link" type="button" id="to-guide" data-i18n="guideBtn">적용 방법</button>
-      <a class="g-link" href="https://github.com/Seokwoooo/lucian-uxui-prompt" target="_blank" rel="noopener">GitHub<span aria-hidden="true"> ↗</span></a>
+      <a class="g-link" href="https://github.com/BuDingSM/lucian-uxui-prompt" target="_blank" rel="noopener">GitHub<span aria-hidden="true"> ↗</span></a>
     </div>
   </div>
   <div class="g-side-foot">
@@ -75,6 +75,7 @@ r.setAttribute('lang',l);if(l==='en')r.classList.add('i18n-wait')})();
         <svg class="g-lang-ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.3 3.6 5.1 3.6 8.5s-1.2 6.2-3.6 8.5c-2.4-2.3-3.6-5.1-3.6-8.5S9.6 5.8 12 3.5z"/></svg>
         <button class="g-lang-b" type="button" data-lang="ko" lang="ko" aria-pressed="true" aria-label="한국어">KO</button>
         <button class="g-lang-b" type="button" data-lang="en" lang="en" aria-pressed="false" aria-label="English">EN</button>
+        <button class="g-lang-b" type="button" data-lang="zh" lang="zh" aria-pressed="false" aria-label="中文">中文</button>
       </div>
       <button class="g-tool g-theme" type="button" id="theme" aria-label="라이트 테마로 전환">
         <svg viewBox="0 0 24 24" aria-hidden="true">

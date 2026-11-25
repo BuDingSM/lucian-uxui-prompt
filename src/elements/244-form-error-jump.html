@@ -1,5 +1,5 @@
 <!-- @meta {"title":"틀린 칸으로 데려가는 폼 검증","category":"폼·입력","summary":"가입 폼 맨 아래에서 가입하기를 누르면 위쪽에 ‘4개 항목을 확인해 주세요’ 같은 요약이 내려오고, 틀린 칸들이 빨간 테두리로 흔들리며 안내 문구가 펼쳐집니다. 폼은 첫 번째 틀린 칸까지 부드럽게 올라가 그 칸에 커서를 놓고, 요약의 항목을 누르면 그 칸으로 바로 갑니다. 고친 칸은 문구가 접히고 체크가 생기며 요약 숫자가 줄어, 모두 고치면 가입이 완료됩니다.","hint":"맨 아래 가입하기를 눌러 본 뒤, 틀린 칸을 하나씩 고쳐 보세요","shape":"tall","tags":["validation","form","error-summary","accessibility","signup"]} -->
-<!-- @demo [["wait",700],["scroll",".u244-sc",0,"end",900],["tap",".u244-go",0,{"after":1500}],["type",".u244-in",0,{"ko":"김민지","en":"Minji Kim"},110],["wait",500],["tap",".u244-sm a",1,{"after":700}],["type",".u244-in",1,"team.kr",70],["wait",400],["erase",".u244-in",2,"all",25],["type",".u244-in",2,"lucian2026",60],["wait",400],["tap",".u244-ag",0,{"after":500}],["tap",".u244-go",0,{"after":2000}],["reset"]] -->
+<!-- @demo [["wait",700],["scroll",".u244-sc",0,"end",900],["tap",".u244-go",0,{"after":1500}],["type",".u244-in",0,{"ko":"김민지","en":"Minji Kim","zh":"Minji Kim"},110],["wait",500],["tap",".u244-sm a",1,{"after":700}],["type",".u244-in",1,"team.kr",70],["wait",400],["erase",".u244-in",2,"all",25],["type",".u244-in",2,"lucian2026",60],["wait",400],["tap",".u244-ag",0,{"after":500}],["tap",".u244-go",0,{"after":2000}],["reset"]] -->
 <!-- @en {"title":"Form validation that takes you to errors","summary":"Press Sign up at the bottom of a sign-up form and a summary such as “4 fields need attention” drops in at the top, while the wrong fields shake with red outlines and their hints unfold. The form glides up to the first wrong field and puts the cursor there, and pressing an item in the summary jumps straight to that field. Fixed fields fold their hint and gain a check as the summary count drops, and once everything is fixed the sign-up completes.","hint":"Press Sign up at the bottom, then fix the wrong fields one by one","map":[
   [">회원가입<", ">Sign up<"],
   [">1분이면 끝나요<", ">Takes about a minute<"],
@@ -11,6 +11,49 @@
   ["'가입 완료! 환영해요'", "'You’re in! Welcome'"],
   ["aria-label=\"가입 폼\"", "aria-label=\"Sign-up form\""]
 ]} -->
+<!-- @zh {
+  "title": "直达错误项的表单验证",
+  "summary": "点注册表单底部的“注册”，顶部会落下一条“有 4 个字段需要注意”这样的汇总，填错的字段带着红色边框抖动，并展开提示。表单会平滑滑到第一个错的字段并把光标放进去，点汇总里的条目可以直接跳到对应字段。改对的字段会收起提示、打上对勾，汇总数字随之减少，全部改对就完成注册。",
+  "hint": "点底部的“注册”，再一个一个改掉错的字段",
+  "map": [
+    [
+      ">회원가입<",
+      ">注册<"
+    ],
+    [
+      ">1분이면 끝나요<",
+      ">1 分钟就搞定<"
+    ],
+    [
+      "var F = [['이름', 'text', '', '이름을 입력해 주세요'], ['이메일', 'email', 'minji@', '이메일 형식이 맞지 않아요 (예: name@site.com)'], ['비밀번호', 'password', 'abc', '8자 이상, 숫자를 하나 넣어 주세요'], ['전화번호 (선택)', 'tel', '', '']]",
+      "var F = [['姓名', 'text', '', '请输入姓名'], ['邮箱', 'email', 'minji@', '邮箱格式不对（例如：name@site.com）'], ['密码', 'password', 'abc', '8 位以上，至少含 1 个数字'], ['电话（选填）', 'tel', '', '']]"
+    ],
+    [
+      ">약관과 개인정보 처리에 동의해요<",
+      ">同意服务条款和隐私政策<"
+    ],
+    [
+      "'약관 동의'",
+      "'条款'"
+    ],
+    [
+      ">가입하기<",
+      ">注册<"
+    ],
+    [
+      "'개 항목을 확인해 주세요'",
+      "' 个字段需要注意'"
+    ],
+    [
+      "'가입 완료! 환영해요'",
+      "'注册成功！欢迎你'"
+    ],
+    [
+      "aria-label=\"가입 폼\"",
+      "aria-label=\"注册表单\""
+    ]
+  ]
+} -->
 <style>
 .u244{position:relative;width:300px;height:480px;border-radius:32px;overflow:hidden;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);color:var(--ux-ink)}
 .u244-sc{position:absolute;inset:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;padding:24px 20px 26px}

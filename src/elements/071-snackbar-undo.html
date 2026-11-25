@@ -13,6 +13,7 @@
   ["'안 읽음 ' + n", "n + ' unread'"],
   ["batch.length > 1 ? '메일 <b>' + batch.length + '</b>개를 지웠어요' : '메일을 지웠어요'", "batch.length > 1 ? '<b>' + batch.length + '</b> emails deleted' : 'Email deleted'"]
 ]} -->
+<!-- @zh {"title": "左滑删除带撤销", "summary": "把邮件向左划，背后的红色层露出来，垃圾桶图标越变越大；划得够远，整行会折起来消失。底部弹出一条带倒计时圆环的提示，点「撤销」，删掉的行会重新展开回来。", "hint": "向左拖一行删除，或悬停一行点垃圾桶图标，多删几封再点「撤销」全部恢复，键盘在行上按 Delete", "map": [["받은편지함을 모두 비웠어요", "收件箱已清空"], ["받은편지함", "收件箱"], ["되돌리기", "撤销"], ["['한', '한도윤', '오전 9:41', '시안 피드백 정리해서 보내요'", "['D', 'Doyun Han', '上午 9:41', '设计稿反馈都整理好了，发你看看'"], ["['윤', '윤하린', '오전 8:15', '금요일 밋업 장소가 바뀌었어요'", "['H', 'Harin Yoon', '上午 8:15', '周五聚会的地点换了'"], ["['L', 'Lumen 결제', '어제', '10월 영수증이 도착했어요'", "['L', 'Lumen 账单', '昨天', '10 月的收据到了'"], ["['정', '정미나', '어제', 'QA 체크리스트 v3 공유합니다'", "['M', 'Mina Jung', '昨天', '分享 QA 检查清单 v3'"], [". Delete 키로 삭제\"", ". 按 Delete 键删除\""], ["aria-label=\"' + d[1] + ' 메일 삭제\">'", "aria-label=\"删除来自 ' + d[1] + ' 的邮件\">'"], ["'안 읽음 ' + n", "n + ' 封未读'"], ["batch.length > 1 ? '메일 <b>' + batch.length + '</b>개를 지웠어요' : '메일을 지웠어요'", "batch.length > 1 ? '已删除 <b>' + batch.length + '</b> 封邮件' : '已删除一封邮件'"]]} -->
 <style>
 .u071{position:relative;width:340px;height:470px;border-radius:30px;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);overflow:hidden}
 .u071-head{display:flex;align-items:baseline;justify-content:space-between;padding:20px 20px 8px}

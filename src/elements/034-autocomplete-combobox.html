@@ -1,5 +1,5 @@
 <!-- @meta {"title":"공항 자동완성","category":"입력·검색","summary":"글자를 치면 남은 이름이 흐리게 이어 보이고 Tab으로 바로 받아들입니다. 아래 목록은 맞는 글자를 강조하며 걸러지고, 방향키를 따라 강조 막대가 미끄러집니다. 고르면 비행기 아이콘과 함께 확정됩니다.","hint":"‘도’, ‘오’, ‘방’처럼 입력해 보세요. Tab으로 자동완성, 방향키와 Enter로 고릅니다","shape":"square","hue":"#3D8BFF","hue2":"#22C3A6","tags":["autocomplete","combobox","typeahead","search","listbox"]} -->
-<!-- @demo [["wait",700],["tap",".u034-in"],["erase",".u034-in",0,"all",60],["wait",300],["type",".u034-in",0,{"ko":"방","en":"Ba"},180],["wait",900],["key",".u034-in",0,"Tab"],["wait",1700],["erase",".u034-in",0,"all",18],["wait",300],["type",".u034-in",0,{"ko":"도","en":"To"},180],["wait",700],["key",".u034-in",0,"ArrowDown"],["wait",600],["key",".u034-in",0,"Enter"],["wait",1700],["reset"]] -->
+<!-- @demo [["wait",700],["tap",".u034-in"],["erase",".u034-in",0,"all",60],["wait",300],["type",".u034-in",0,{"ko":"방","en":"Ba","zh":"曼"},180],["wait",900],["key",".u034-in",0,"Tab"],["wait",1700],["erase",".u034-in",0,"all",18],["wait",300],["type",".u034-in",0,{"ko":"도","en":"To","zh":"东"},180],["wait",700],["key",".u034-in",0,"ArrowDown"],["wait",600],["key",".u034-in",0,"Enter"],["wait",1700],["reset"]] -->
 <!-- @en {"title":"Airport autocomplete","summary":"As you type, the rest of the name appears faintly and Tab accepts it. The list below filters with the matching letters highlighted, and the highlight bar glides along with the arrow keys. Choosing one locks it in with a plane icon.","hint":"Type “To”, “O” or “Ba”. Tab completes; arrow keys and Enter choose","map":[
   ["도착 공항", "Arriving at"],
   ["value=\"도\"", "value=\"To\""],
@@ -14,6 +14,7 @@
   ["['방콕', '수완나품 공항', 'BKK', '5시간 50분'", "['Bangkok', 'Suvarnabhumi Airport', 'BKK', '5h 50m'"],
   ["['다낭', '다낭 국제공항', 'DAD', '4시간 30분'", "['Da Nang', 'Da Nang International', 'DAD', '4h 30m'"]
 ]} -->
+<!-- @zh {"title": "机场联想输入", "summary": "边输入，名字的后半部分会淡淡地补全，按 Tab 就能接受。下面的列表会筛选并高亮匹配的字母，高亮条跟着方向键滑动。选定后会锁定，并带上飞机图标。", "hint": "输入“东”、“大”或“曼”，Tab 补全，方向键加回车选择", "map": [["도착 공항", "到达机场"], ["value=\"도\"", "value=\"东\""], ["도시나 공항 코드", "城市或机场代码"], ["aria-label=\"공항\"", "aria-label=\"机场\""], ["\">‘' + esc(q) + '’ 공항을 찾지 못했어요</li>'", "\">没有找到与‘' + esc(q) + '’匹配的机场</li>'"], ["['도쿄', '나리타 국제공항', 'NRT', '2시간 25분'", "['东京', '成田国际机场', 'NRT', '2小时25分'"], ["['도쿄', '하네다 공항', 'HND', '2시간 20분'", "['东京', '羽田机场', 'HND', '2小时20分'"], ["['도하', '하마드 국제공항', 'DOH', '10시간 40분'", "['多哈', '哈马德国际机场', 'DOH', '10小时40分'"], ["['오사카', '간사이 국제공항', 'KIX', '1시간 50분'", "['大阪', '关西国际机场', 'KIX', '1小时50分'"], ["['오클랜드', '오클랜드 공항', 'AKL', '11시간 30분'", "['奥克兰', '奥克兰机场', 'AKL', '11小时30分'"], ["['방콕', '수완나품 공항', 'BKK', '5시간 50분'", "['曼谷', '素万那普机场', 'BKK', '5小时50分'"], ["['다낭', '다낭 국제공항', 'DAD', '4시간 30분'", "['岘港', '岘港国际机场', 'DAD', '4小时30分'"]]} -->
 <style>
 .u034{position:relative;width:340px;height:380px}
 .u034-lab{display:block;margin:0 4px 8px;font-size:13px;font-weight:700;color:var(--ux-ink-3)}

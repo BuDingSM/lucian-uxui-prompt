@@ -1,11 +1,18 @@
 <!-- @meta {"title":"글자 수 제한","category":"폼·입력","summary":"40자까지 쓸 수 있는 ‘한 줄 소개’ 입력칸입니다. 글을 쓰면 오른쪽 아래 작은 링이 차오르고, 8자 남으면 링이 커지며 호박색으로 남은 글자 수를 보여 줍니다. 40자를 넘기면 링이 빨개지며 카드가 도리질하듯 흔들리고, 넘친 글자에 빨간 형광펜이 칠해지며 저장 버튼이 잠깁니다. 지우면 다시 차분해집니다.","hint":"40자를 넘겨 써 보세요","shape":"square","hue":"#22C55E","hue2":"#F59E0B","tags":["textarea","character-count","limit","validation","ring","shake","highlight"]} -->
-<!-- @demo [["wait",900],["type",".u467-ta",0,{"ko":"입니다. 요즘은 소금빵에 푹 빠져 있어요!","en":", sketching every bun!"},95],["wait",1500],["erase",".u467-ta",0,5,90],["wait",1300],["reset"]] -->
+<!-- @demo [["wait",900],["type",".u467-ta",0,{"ko":"입니다. 요즘은 소금빵에 푹 빠져 있어요!","en":", sketching every bun!","zh":"，最近迷上了盐面包，每种都想画下来！"},95],["wait",1500],["erase",".u467-ta",0,5,90],["wait",1300],["reset"]] -->
 <!-- @en {"title":"Character limit","summary":"A one-line bio field that takes up to 40 characters. As you type, a small ring in the corner fills; with 8 left it grows and turns amber to show how many remain. Go past 40 and the ring turns red, the card gives a little head-shake, the overflow gets a red highlighter and Save locks. Delete a few and everything calms down again.","hint":"Type past the 40-character limit","map":[
   [">한 줄 소개<", ">One-line bio<"],
   [">주말마다 동네 빵집을 찾아다니는 사람</textarea>", ">Weekend bakery hunter</textarea>"],
   [">저장<", ">Save<"],
   ["left: function (n) { return n + '자 남았어요'; }", "left: function (n) { return n + (n === 1 ? ' character left' : ' characters left'); }"],
   ["over: function (n) { return n + '자 넘었어요'; }", "over: function (n) { return n + (n === 1 ? ' character over the limit' : ' characters over the limit'); }"]
+]} -->
+<!-- @zh {"title":"字数限制", "summary":"一行最多 40 个字符的简介框。边打字边看：角落的小圆环慢慢填满；还剩 8 个时变大变黄，提醒还剩多少。超过 40 个，圆环变红，卡片轻轻摇一下，超出的部分标上红色高亮，保存也锁住了。删几个字，一切又平静下来。", "hint":"一直打字，超过 40 个字符的限制", "map":[
+  [">한 줄 소개<", ">一句话简介<"],
+  [">주말마다 동네 빵집을 찾아다니는 사람</textarea>", ">周末面包房猎手</textarea>"],
+  [">저장<", ">保存<"],
+  ["left: function (n) { return n + '자 남았어요'; }", "left: function (n) { return n + '个字符剩余'; }"],
+  ["over: function (n) { return n + '자 넘었어요'; }", "over: function (n) { return n + '个字符超出限制'; }"]
 ]} -->
 <style>
 .u467{position:relative;width:340px;height:300px;display:grid;place-items:center}

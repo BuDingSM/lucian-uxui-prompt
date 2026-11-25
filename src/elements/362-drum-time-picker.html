@@ -9,6 +9,15 @@
   ["aria-label=\"분\"", "aria-label=\"Minute\""],
   [" · 반복 · 평일<", " · Repeats on weekdays<"]
 ]} -->
+<!-- @zh {"title":"转盘式时间选择器","summary":"上午/下午、小时、分钟三个转盘像圆筒一样转动，停在中间那条线上的值就是选中的。松手后会稳稳停在最近的一格，上下两格像绕到圆筒背面一样倾斜变淡。选好时间后，上面的闹钟文字和剩余时间都会跟着变。","hint":"上下滚动每个转盘，或者点中转盘后按 ↑/↓","map":[
+  ["var AP = ['오전', '오후'];", "var AP = ['上午', '下午'];"],
+  ["'알람 ' + AP[sel[0]] + ' ' + hour + ':' + mm", "'闹钟 ' + AP[sel[0]] + ' ' + hour + ':' + mm"],
+  ["h + '시간 ' + m + '분 후에 울려요'", "h + '小时' + m + '分钟后响铃'"],
+  ["aria-label=\"오전 오후\"", "aria-label=\"上午或下午\""],
+  ["aria-label=\"시\"", "aria-label=\"小时\""],
+  ["aria-label=\"분\"", "aria-label=\"分钟\""],
+  [" · 반복 · 평일<", " · 工作日重复<"]
+]} -->
 <style>
 .u362{position:relative;width:340px;height:330px;display:flex;flex-direction:column;padding:18px;border-radius:28px;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);overflow:hidden}
 .u362-al{margin:0;font-size:20px;font-weight:850;letter-spacing:-.03em;font-variant-numeric:tabular-nums}

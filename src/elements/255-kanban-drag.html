@@ -4,6 +4,21 @@
   ["var COL = ['할 일', '진행 중', '완료']", "var COL = ['To do', 'In progress', 'Done']"],
   ["var CD = [[0, '가격표 시안', '디자인', '#EC4899'], [0, '온보딩 메일 문구', '마케팅', '#F59E0B'], [0, '결제 오류 로그', '개발', '#0EA5E9'], [1, '랜딩 첫 화면', '디자인', '#EC4899'], [1, 'API 속도 개선', '개발', '#0EA5E9'], [2, '도메인 연결', '개발', '#0EA5E9']]", "var CD = [[0, 'Pricing page draft', 'Design', '#EC4899'], [0, 'Onboarding email copy', 'Marketing', '#F59E0B'], [0, 'Checkout error logs', 'Dev', '#0EA5E9'], [1, 'Landing hero', 'Design', '#EC4899'], [1, 'Speed up the API', 'Dev', '#0EA5E9'], [2, 'Connect domain', 'Dev', '#0EA5E9']]"]
 ]} -->
+<!-- @zh {
+  "title": "拖动移动的看板卡片",
+  "summary": "待办、进行中、已完成三列任务板。拿起一张卡片，它会微微倾斜浮起来；拖到另一列上方，下面会空出一个位置，下面的卡片往下让位。放下后卡片落进空位，每列的数量随之更新，拖进“已完成”的卡片会打上对勾，标题加删除线。",
+  "hint": "拿起一张卡片，拖到另一列放下",
+  "map": [
+    [
+      "var COL = ['할 일', '진행 중', '완료']",
+      "var COL = ['待办', '进行中', '已完成']"
+    ],
+    [
+      "var CD = [[0, '가격표 시안', '디자인', '#EC4899'], [0, '온보딩 메일 문구', '마케팅', '#F59E0B'], [0, '결제 오류 로그', '개발', '#0EA5E9'], [1, '랜딩 첫 화면', '디자인', '#EC4899'], [1, 'API 속도 개선', '개발', '#0EA5E9'], [2, '도메인 연결', '개발', '#0EA5E9']]",
+      "var CD = [[0, '定价页设计稿', '设计', '#EC4899'], [0, '新用户引导邮件文案', '市场', '#F59E0B'], [0, '结账报错日志', '开发', '#0EA5E9'], [1, '落地页首屏', '设计', '#EC4899'], [1, '提升 API 速度', '开发', '#0EA5E9'], [2, '连接域名', '开发', '#0EA5E9']]"
+    ]
+  ]
+} -->
 <style>
 .u255{position:relative;width:340px;height:340px;border-radius:30px;overflow:hidden;background:var(--ux-surface-2);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);color:var(--ux-ink);touch-action:none;user-select:none}
 .u255-bd{position:absolute;inset:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}

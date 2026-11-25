@@ -6,6 +6,12 @@
   ["wrong: '코드가 맞지 않아요'", "wrong: 'That code didn’t match'"],
   ["ok: '인증을 마쳤어요'", "ok: 'Verified'"]
 ]} -->
+<!-- @zh {"title":"验证码", "summary":"六格验证码输入框。数字会一个个弹进格子，光标跟着走；粘贴能一次填满。输错了格子会抖动并清空；输对了，六个格子会合到一起画出一个对勾。", "hint":"先随便输错的数字，再输入或粘贴 482915", "map":[
+  ["aria-label=\"인증 코드 6자리\"", "aria-label=\"6 位验证码\""],
+  ["digit: function (k) { return '코드 ' + k + '번째 자리'; }", "digit: function (k) { return '第 ' + k + ' 位'; }"],
+  ["wrong: '코드가 맞지 않아요'", "wrong: '验证码不对'"],
+  ["ok: '인증을 마쳤어요'", "ok: '验证通过'"]
+]} -->
 <style>
 .u406{position:relative;width:340px;height:300px;display:grid;place-items:center}
 .u406-row{position:relative;display:grid;grid-template-columns:repeat(6,42px);gap:8px}

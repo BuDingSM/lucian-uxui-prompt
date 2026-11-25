@@ -14,6 +14,7 @@
   ["'이전 기간 대비 ' + (d.p < 0 ? '감소 ' : '증가 ') + Math.abs(d.p) + '%'", "(d.p < 0 ? 'Down ' : 'Up ') + Math.abs(d.p) + '% from the previous period'"],
   ["₩0", "$0"]
 ]} -->
+<!-- @zh {"title": "分段时段切换", "summary": "切换时段，滑块拉伸着移动，大数字从旧值数到新值，图表线也弯成新的形状。", "hint": "点「日」「周」「月」「年」，数字和图表会一起变，键盘用左右方向键", "map": [["aria-label=\"기간\"", "aria-label=\"时段\""], [">일</button>", ">日</button>"], [">주</button>", ">周</button>"], [">월</button>", ">月</button>"], [">년</button>", ">年</button>"], ["지난 30일 매출", "过去 30 天营收"], ["지난 7일 매출", "过去 7 天营收"], ["오늘 매출", "今日营收"], ["올해 매출", "今年营收"], ["function won(v) { return v >= 100000000 ? '₩' + (v / 100000000).toFixed(2) + '억' : '₩' + Math.round(v / 10000).toLocaleString('ko-KR') + '만'; }", "function won(v) { return '¥' + Math.round(v / 1380).toLocaleString('zh-CN'); }"], ["'이전 기간 대비 ' + (d.p < 0 ? '감소 ' : '증가 ') + Math.abs(d.p) + '%'", "(d.p < 0 ? '下降 ' : '上升 ') + Math.abs(d.p) + '%，较上一时段'"], ["₩0", "¥0"]]} -->
 <style>
 .u047{position:relative;width:350px;height:330px;display:flex;flex-direction:column;padding:16px 16px 0;border-radius:28px;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -38px var(--ux-shadow-strong);overflow:hidden}
 .u047-seg{position:relative;display:grid;grid-template-columns:repeat(4,1fr);padding:4px;border-radius:16px;background:var(--ux-surface-2)}

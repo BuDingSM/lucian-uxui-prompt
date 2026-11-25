@@ -1,5 +1,5 @@
 <!-- @meta {"title":"색 태그 입력","category":"입력·검색","summary":"Enter를 누르면 글자가 색 태그로 튀어 나오고, 추천 칩을 누르면 입력칸으로 들어갑니다. 빈 칸에서 Backspace를 한 번 누르면 마지막 태그가 지울 준비로 강조되고, 한 번 더 누르면 사라집니다.","hint":"입력칸에 단어를 쓰고 Enter를 눌러 보세요. 아래 추천 칩도 눌러 보세요","shape":"square","hue":"#3D8BFF","hue2":"#FF6B8B","tags":["tags","chips","input","keyboard","suggestions"]} -->
-<!-- @demo [["wait",500],["tap",".u029-in"],["type",".u029-in",0,{"ko":"브랜딩","en":"branding"},120],["key",".u029-in",0,"Enter"],["wait",1000],["tap",".u029-sg",0],["wait",900],["tap",".u029-sg",1],["wait",900],["tap",".u029-sg",3],["wait",1500],["key",".u029-in",0,"Backspace"],["wait",900],["key",".u029-in",0,"Backspace"],["wait",1300],["reset"]] -->
+<!-- @demo [["wait",500],["tap",".u029-in"],["type",".u029-in",0,{"ko":"브랜딩","en":"branding","zh":"品牌"},120],["key",".u029-in",0,"Enter"],["wait",1000],["tap",".u029-sg",0],["wait",900],["tap",".u029-sg",1],["wait",900],["tap",".u029-sg",3],["wait",1500],["key",".u029-in",0,"Backspace"],["wait",900],["key",".u029-in",0,"Backspace"],["wait",1300],["reset"]] -->
 <!-- @en {"title":"Colored tag input","summary":"Press Enter and the text pops out as a colored tag; press a suggestion chip and it jumps into the field. In an empty field, Backspace once highlights the last tag for removal and a second press removes it.","hint":"Type a word in the field and press Enter. Try the suggestion chips below too","map":[
   ["프로젝트 태그", "Project tags"],
   ["태그 입력 후 Enter", "Type a tag, press Enter"],
@@ -14,6 +14,7 @@
   ["['디자인시스템', '모션', '다크모드']", "['designsystem', 'motion', 'darkmode']"],
   ["['접근성', '온보딩', '마이크로인터랙션', '대시보드']", "['a11y', 'onboarding', 'microinteraction', 'dashboard']"]
 ]} -->
+<!-- @zh {"title": "彩色标签输入", "summary": "按回车，文字会弹出来变成一枚彩色标签；点下面的推荐标签，它会跳进输入框。输入框为空时，按一次退格会高亮最后一个标签，再按一次就删掉它。", "hint": "在输入框里打字按回车，也试试下面的推荐标签", "map": [["프로젝트 태그", "项目标签"], ["태그 입력 후 Enter", "输入标签后按回车"], ["\"태그 추가\"", "\"添加标签\""], ["추천 태그", "推荐标签"], ["v + ' 태그 지우기'", "'删除标签 ' + v"], ["v + ' 태그 추가'", "'添加标签 ' + v"], ["태그는 여섯 개까지 붙일 수 있어요", "最多可以添加六个标签"], ["이미 있는 태그예요", "这个标签已经有了"], ["'#' + v + ' 태그를 붙였어요'", "'已添加 #' + v"], ["'#' + tag.dataset.v + ' 태그를 지웠어요'", "'已删除 #' + tag.dataset.v"], ["['디자인시스템', '모션', '다크모드']", "['设计系统', '动效', '深色模式']"], ["['접근성', '온보딩', '마이크로인터랙션', '대시보드']", "['无障碍', '新手引导', '微交互', '仪表盘']"]]} -->
 <style>
 .u029{position:relative;width:350px}
 .u029-head{display:flex;align-items:baseline;justify-content:space-between;margin:0 4px 10px}

@@ -8,6 +8,37 @@
   ["'휴지통 ' + n + '개'", "'Trash, ' + n + ' items'"],
   [">내 파일<", ">My files<"]
 ]} -->
+<!-- @zh {
+  "title": "拖进回收站",
+  "summary": "拿起一个文件拖向回收站：越靠近，盖子开得越起劲；松手放进去，文件会一边旋转一边缩小飞进桶里，回收站也跟着抖一下。数量叠在角标上，点“撤销”，最后一个文件会从桶里弹回原位。",
+  "hint": "把文件拖到右下角的回收站上；选中文件后按 Delete 也可以",
+  "map": [
+    [
+      "var FILES = [['기획안', 'PDF', '#FF6B6B'], ['회의록', 'DOC', '#3D8BFF'], ['예산표', 'XLS', '#20C997'], ['로고 시안', 'PNG', '#B197FC']];",
+      "var FILES = [['方案书', 'PDF', '#FF6B6B'], ['会议记录', 'DOC', '#3D8BFF'], ['预算表', 'XLS', '#20C997'], ['Logo 方案', 'PNG', '#B197FC']];"
+    ],
+    [
+      ">되돌리기<",
+      ">撤销<"
+    ],
+    [
+      "aria-label=\"휴지통\"",
+      "aria-label=\"回收站\""
+    ],
+    [
+      "', 끌어서 휴지통에 버리기'",
+      "'，拖到回收站删除'"
+    ],
+    [
+      "'휴지통 ' + n + '개'",
+      "'回收站，共 ' + n + ' 个文件'"
+    ],
+    [
+      ">내 파일<",
+      ">我的文件<"
+    ]
+  ]
+} -->
 <style>
 .u315{position:relative;width:340px;height:330px;padding:18px;border-radius:28px;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);overflow:hidden}
 .u315-k{margin:0;font-size:12px;font-weight:750;color:var(--ux-ink-3)}

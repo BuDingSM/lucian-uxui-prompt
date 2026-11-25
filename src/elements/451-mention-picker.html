@@ -1,5 +1,5 @@
 <!-- @meta {"title":"멘션 피커","category":"입력·검색","summary":"댓글 상자에 @를 치면 그 글자 바로 아래에 멤버 목록이 톡 열리고, 이어서 치는 글자로 바로 걸러집니다. ↑↓로 고르고 Enter를 누르면 이름이 보라색 멘션 칩이 되어 통통 튀어 들어갑니다. 칩 바로 뒤에서 지우기를 누르면 칩이 통째로 지워집니다.","hint":"댓글 상자에 @와 이름 첫 글자를 쳐 보세요","shape":"square","hue":"#3D8BFF","hue2":"#A78BFA","tags":["mention","autocomplete","comment","combobox","chip","keyboard"]} -->
-<!-- @demo [["wait",900],["erase",".u451-ta",0,1,60],["wait",450],["type",".u451-ta",0,"@",100],["wait",700],["type",".u451-ta",0,{"ko":"서","en":"se"},170],["wait",650],["key",".u451-ta",0,"ArrowDown",1,520],["key",".u451-ta",0,"Enter",1,200],["wait",1700],["reset"]] -->
+<!-- @demo [["wait",900],["erase",".u451-ta",0,1,60],["wait",450],["type",".u451-ta",0,"@",100],["wait",700],["type",".u451-ta",0,{"ko":"서","en":"se","zh":"se"},170],["wait",650],["key",".u451-ta",0,"ArrowDown",1,520],["key",".u451-ta",0,"Enter",1,200],["wait",1700],["reset"]] -->
 <!-- @en {"title":"Mention picker","summary":"Type @ in a comment box and a member list pops open right under that character, then filters as you keep typing. Pick with ↑↓ and press Enter: the name drops in as a violet mention chip with a little bounce. Press Backspace right after a chip and the whole chip goes at once.","hint":"Type @ and the first letters of a name","map":[
   ["aria-label=\"댓글\"", "aria-label=\"Comment\""],
   ["placeholder=\"댓글을 남겨 주세요. @로 멘션\"", "placeholder=\"Leave a comment. Use @ to mention\""],
@@ -18,6 +18,25 @@
   ["'개발'", "'Dev'"],
   ["'디자인'", "'Design'"],
   ["'마케팅'", "'Marketing'"]
+]} -->
+<!-- @zh {"title":"@提及选择器", "summary":"在评论框里输入 @，成员列表就正好在那个字符下面弹出来，继续打字还会筛选。用 ↑↓ 选，按回车，名字就变成一颗紫色的提及标签弹进来。刚贴上标签就按退格，整颗标签一下子全删掉。", "hint":"输入 @，再输名字的前几个字母", "map":[
+  ["aria-label=\"댓글\"", "aria-label=\"评论\""],
+  ["placeholder=\"댓글을 남겨 주세요. @로 멘션\"", "placeholder=\"写条评论，用 @ 提及成员\""],
+  [">확인 부탁드려요 @<", ">请看一下 @<"],
+  ["aria-label=\"멤버 멘션\"", "aria-label=\"提及成员\""],
+  ["aria-label=\"댓글 보내기\"", "aria-label=\"发送评论\""],
+  ["aria-label=\"멤버\"", "aria-label=\"成员\""],
+  ["'멤버 {n}명'", "'{n} 位成员'"],
+  ["'일치하는 멤버가 없어요'", "'没有匹配的成员'"],
+  ["'{name} 님을 멘션했어요'", "'已提及 {name}'"],
+  ["'댓글을 남겼어요'", "'评论已发送'"],
+  ["'서지훈'", "'Jihoon Seo'"],
+  ["'한서연'", "'Seoyeon Han'"],
+  ["'김민준'", "'Minjun Kim'"],
+  ["'이수아'", "'Sua Lee'"],
+  ["'개발'", "'开发'"],
+  ["'디자인'", "'设计'"],
+  ["'마케팅'", "'营销'"]
 ]} -->
 <style>
 .u451{position:relative;width:340px;height:300px}

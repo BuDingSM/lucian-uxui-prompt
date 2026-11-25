@@ -10,6 +10,7 @@
   ["return '₩' + n.toLocaleString('ko-KR');", "return '$' + Math.round(n / 1000);"],
   ["won(v[x[0]]).toLocaleString('ko-KR') + '원'", "'$' + Math.round(won(v[x[0]]) / 1000)"]
 ]} -->
+<!-- @zh {"title": "价格直方图区间筛选", "summary": "用两个滑块选价格区间：区间外的柱子沉下去，只有区间内的柱子亮起颜色。结果数量跟着滚动，顶部的价格也一起更新。", "hint": "拖动两个滑块缩小区间，方向键也可以", "map": [["가격 범위", "价格区间"], ["</span>개 상품</span>", "</span> 件商品</span>"], ["최저 가격", "最低价"], ["최고 가격", "最高价"], ["₩53,000 – ₩120,000", "¥53 – ¥120"], ["<span>₩30,000</span><span>₩105,000</span><span>₩180,000</span>", "<span>¥30</span><span>¥105</span><span>¥180</span>"], ["return '₩' + n.toLocaleString('ko-KR');", "return '¥' + Math.round(n / 1000);"], ["won(v[x[0]]).toLocaleString('ko-KR') + '원'", "'¥' + Math.round(won(v[x[0]]) / 1000)"]]} -->
 <style>
 .u024{position:relative;width:340px;padding:4px 8px}
 .u024-head{display:flex;align-items:flex-end;justify-content:space-between;gap:8px}

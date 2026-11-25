@@ -9,6 +9,15 @@
   ["'오늘'", "'Today'"],
   ["aria-label=\"지표 차트, 좌우로 움직여 날짜 보기\"", "aria-label=\"Metric charts, move sideways to inspect a day\""]
 ]} -->
+<!-- @zh {"title":"光标同步的小图组","summary":"访客、转化率、平均停留、响应时间四张小图共用同一条 30 天横轴，第一次出现时线条从左向右画出。在任意一张图上移动光标，一条竖线会同时扫过四张图，当天的点和数值一起更新；上线和促销那天标着虚线小旗，响应时间的飙升和访客的上涨可以并排比较。打开「对比上期」，过去 30 天会以淡淡的虚线铺在下面，每个数值旁边还附上变化率。","hint":"在图表上移动光标，再打开「对比上期」","map":[
+  ["var NM = ['방문자', '전환율', '평균 체류', '응답 시간']", "var NM = ['访客', '转化率', '平均停留', '响应时间']"],
+  ["var EV = [[9, '배포'], [21, '할인 행사']]", "var EV = [[9, '上线'], [21, '促销']]"],
+  ["var WD = ['일', '월', '화', '수', '목', '금', '토']", "var WD = ['日', '一', '二', '三', '四', '五', '六']"],
+  [">지난 30일<", ">过去 30 天<"],
+  [">이전 기간 겹치기<", ">对比上期<"],
+  ["'오늘'", "'今天'"],
+  ["aria-label=\"지표 차트, 좌우로 움직여 날짜 보기\"", "aria-label=\"指标图表，左右移动查看日期\""]
+]} -->
 <style>
 .u400{position:relative;width:300px;height:480px;border-radius:32px;overflow:hidden;background:var(--ux-surface);color:var(--ux-ink);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong)}
 .u400-hd{position:absolute;left:18px;right:16px;top:16px;display:flex;justify-content:space-between;align-items:center}

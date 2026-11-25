@@ -1,7 +1,7 @@
 // lucianLabs UI 요소 갤러리 빌드
 // 실행: node prompt-uxui/src/build.mjs
 // 입력: src/tokens.css, src/order.json(컬렉션 안 완성도 순), src/popular.json(전체 보여 주는 순서), src/elements/NNN-slug.html (요소 400개: 001~200 인터페이스, 201~400 애니메이션), src/gallery/{index.html,gallery.css,gallery.js,i18n-core.js}
-// 요소 파일 머리: <!-- @meta {...} --> 필수, <!-- @demo [...] --> 자동 재생 시연, <!-- @en {...} --> 영어 제목·설명·번역 목록
+// 요소 파일 머리: <!-- @meta {...} --> 필수, <!-- @demo [...] --> 자동 재생 시연, <!-- @en {...} --> 영어 제목·설명·번역 목록, <!-- @zh {...} --> 중국어 제목·설명·번역 목록(형식은 @en과 동일, map은 [한글 원문, 중국어])
 // 출력: prompt-uxui/prompt-uxui-lab/index.html (단일 파일, 모든 코드를 인라인으로 포함)
 import { readFileSync, readdirSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -85,6 +85,12 @@ for (const file of files) {
     try { en = JSON.parse(enMatch[1]); } catch (e) { errors.push(`${file}: @en JSON 오류 ${e.message}`); }
     src = src.slice(enMatch[0].length).trim();
   }
+  let zh = null;
+  const zhMatch = src.match(/^<!--\s*@zh\s*([\s\S]*?)-->/);
+  if (zhMatch) {
+    try { zh = JSON.parse(zhMatch[1]); } catch (e) { errors.push(`${file}: @zh JSON 오류 ${e.message}`); }
+    src = src.slice(zhMatch[0].length).trim();
+  }
   if (!Array.isArray(demo)) { errors.push(`${file}: @demo는 배열이어야 합니다`); demo = []; }
   demo.forEach((st, k) => {
     if (!Array.isArray(st) || !DEMO_OPS[st[0]]) errors.push(`${file}: @demo ${k}번째 단계 "${JSON.stringify(st).slice(0, 40)}" 알 수 없음`);
@@ -145,6 +151,41 @@ for (const file of files) {
     }));
   }
 
+  // 중국어판: @en과 같은 방식으로 검사합니다. map 키는 @en과 같은 한글 원문이어야 하고, 중국어판에 한글이 남으면 안 됩니다
+  if (!zh) (STRICT ? errors : warns).push(`${file}: @zh 없음`);
+  else {
+    const pairs = Array.isArray(zh.map) ? zh.map : [];
+    if (!zh.title || !zh.summary) errors.push(`${file}: @zh title/summary 필요`);
+    pairs.forEach((p) => { if (!Array.isArray(p) || p.length !== 2 || typeof p[0] !== 'string' || typeof p[1] !== 'string') errors.push(`${file}: @zh map 항목 형식 ${JSON.stringify(p).slice(0, 50)}`); });
+    if (en && Array.isArray(en.map)) {
+      const enKeys = en.map.map((p) => p[0]);
+      if (pairs.length !== enKeys.length) errors.push(`${file}: @zh map ${pairs.length}개, @en map ${enKeys.length}개와 개수가 다릅니다`);
+      else pairs.forEach((p, i) => { if (p[0] !== enKeys[i]) errors.push(`${file}: @zh map ${i}번째 키가 @en과 다릅니다: ${JSON.stringify(p[0]).slice(0, 40)}`); });
+    }
+    const zhKeep = Array.isArray(zh.keep) ? zh.keep : (en && Array.isArray(en.keep) ? en.keep : []);
+    const zhH = uxLocalize(html, 'html', pairs), zhJ = uxLocalize(js, 'js', pairs);
+    const left = [];
+    for (const [part, code] of [['html', zhH], ['js', zhJ]]) {
+      code.split('\n').forEach((line, n) => { const l2 = zhKeep.reduce((acc, w) => acc.split(w).join(''), line); if (HANGUL.test(l2)) left.push(`${part}:${n + 1} ${line.trim().slice(0, 110)}`); });
+    }
+    if (left.length) errors.push(`${file}: 중국어판에 한글이 남았습니다\n      ` + left.slice(0, 14).join('\n      ') + (left.length > 14 ? `\n      …외 ${left.length - 14}줄` : ''));
+    const unused = pairs.filter((p) => !html.includes(p[0]) && !js.includes(p[0]));
+    if (unused.length) warns.push(`${file}: 쓰이지 않는 번역 ${unused.map((p) => JSON.stringify(p[0])).slice(0, 4).join(', ')}`);
+    for (const k of ['title', 'summary', 'hint']) if (zh[k] && HANGUL.test(zh[k])) errors.push(`${file}: @zh ${k}에 한글`);
+    // @demo의 {"ko","en"} 객체에는 "zh"도 있어야 합니다. 없으면 중국어 모드에서 시연이 한국어로 나옵니다
+    const checkDemoZh = (v) => {
+      if (Array.isArray(v)) v.forEach(checkDemoZh);
+      else if (v && typeof v === 'object') {
+        if ('ko' in v && 'en' in v) {
+          if (typeof v.zh !== 'string' || !v.zh) errors.push(`${file}: @demo {"ko","en"}에 "zh" 없음: ${JSON.stringify(v.ko).slice(0, 40)}`);
+          else if (HANGUL.test(v.zh)) errors.push(`${file}: @demo zh에 한글: ${JSON.stringify(v.zh).slice(0, 40)}`);
+        }
+        Object.values(v).forEach(checkDemoZh);
+      }
+    };
+    checkDemoZh(demo);
+  }
+
   const [h1, h2] = CATEGORIES[category] || ['#7B61FF', '#3D8BFF'];
   items.push({
     id, slug,
@@ -165,6 +206,7 @@ for (const file of files) {
     js,
     demo,
     en: en ? { title: en.title, summary: en.summary, hint: en.hint || '', map: en.map || [], keep: Array.isArray(en.keep) ? en.keep : [] } : null,
+    zh: zh ? { title: zh.title, summary: zh.summary, hint: zh.hint || '', map: zh.map || [], keep: Array.isArray(zh.keep) ? zh.keep : [] } : null,
   });
 }
 

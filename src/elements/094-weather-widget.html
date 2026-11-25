@@ -15,6 +15,7 @@
   ["h + '시 ' + temp(h) + '도 ' + cond(h)[0]", "(h % 12 || 12) + (h < 12 ? ' AM, ' : ' PM, ') + temp(h) + ' degrees, ' + cond(h)[0]"],
   ["label(hour) + ', ' + T + '도, ' + c[0]", "label(hour) + ', ' + T + ' degrees, ' + c[0]"]
 ]} -->
+<!-- @zh {"title": "可以拖动的天空天气", "summary": "拖动下面的时间条，天空会经过黎明、白天、黄昏和夜晚，太阳和月亮沿着虚线弧线升起落下。云量、降雨、星星和气温都会跟着时间变化。", "hint": "左右拖动时间条，或者点小时标签。选中时间条后用 ←/→ 一次挪一小时。", "map": [["<small>서울 · 성수동</small>", "<small>首尔 · 圣水洞</small>"], ["<span class=\"u094-c\">맑음</span>", "<span class=\"u094-c\">晴</span>"], ["<small>최고 23° · 최저 13°</small>", "<small>最高 23° · 最低 13°</small>"], ["aria-label=\"시각\"", "aria-label=\"时间\""], ["'맑은 밤'", "'晴朗的夜晚'"], ["'맑음'", "'晴'"], ["'구름 조금'", "'多云'"], ["'소나기'", "'阵雨'"], ["'갬'", "'放晴'"], ["(hh < 12 ? '오전 ' : '오후 ') + ((hh % 12) || 12) + ':' + mm", "(hh < 12 ? '上午 ' : '下午 ') + ((hh % 12) || 12) + ':' + mm"], ["'<small>' + h + '시</small>", "'<small>' + (h < 12 ? '上午 ' : '下午 ') + (h % 12 || 12) + ' 点</small>"], ["h + '시 ' + temp(h) + '도 ' + cond(h)[0]", "(h < 12 ? '上午 ' : '下午 ') + (h % 12 || 12) + ' 点，' + temp(h) + ' 度，' + cond(h)[0]"], ["label(hour) + ', ' + T + '도, ' + c[0]", "label(hour) + '，' + T + ' 度，' + c[0]"]]} -->
 <style>
 .u094{position:relative;width:340px;height:420px;display:flex;flex-direction:column;border-radius:32px;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);overflow:hidden}
 .u094-sky{position:relative;height:262px;flex:none;overflow:hidden;background:linear-gradient(180deg,var(--s1),var(--s2));color:#fff}

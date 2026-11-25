@@ -1,5 +1,5 @@
 <!-- @meta {"title":"쓰는 대로 보이는 검색 결과 미리보기","category":"빌더 도구","summary":"페이지 설정에서 제목과 설명을 쓰면 아래 검색 결과 미리보기가 한 글자씩 바로 따라 바뀌고, 칸 아래 막대가 권장 길이만큼 차오릅니다. 제목이 너무 길어지면 막대가 빨갛게 넘치고 미리보기 제목 끝이 말줄임표로 잘립니다. 위의 링크 공유 탭을 누르면 메신저에 붙여 넣었을 때 보일 카드 모양으로 넘어갑니다.","hint":"제목 칸에 글을 더 써 보고, 링크 공유 탭으로 바꿔 보세요","shape":"square","tags":["seo","meta-tags","og-preview","search-snippet","builder"]} -->
-<!-- @demo [["wait",900],["tap",".u249-ti",0,{"after":200}],["type",".u249-ti",0,{"ko":" — 디자이너를 위한 노코드 웹사이트 빌더","en":" — the no-code website builder made for designers"},55],["wait",1000],["tap",".u249-tb",1,{"after":1600}],["tap",".u249-tb",0,{"after":600}],["reset"]] -->
+<!-- @demo [["wait",900],["tap",".u249-ti",0,{"after":200}],["type",".u249-ti",0,{"ko":" — 디자이너를 위한 노코드 웹사이트 빌더","en":" — the no-code website builder made for designers","zh":" ——专为设计师打造的无代码建站工具"},55],["wait",1000],["tap",".u249-tb",1,{"after":1600}],["tap",".u249-tb",0,{"after":600}],["reset"]] -->
 <!-- @en {"title":"Live search result preview","summary":"Type a title and description in page settings and the search result preview below follows each keystroke, while the bar under each field fills toward the recommended length. Make the title too long and its bar overflows in red as the preview title is cut off with an ellipsis. Press the Link share tab above to switch to the card you'd see when pasting the link into a messenger.","hint":"Add more text to the title, then switch to the Link share tab","map":[
   [">제목<", ">Title<"],
   [">설명<", ">Description<"],
@@ -11,6 +11,49 @@
   ["aria-label=\"미리보기 종류\"", "aria-label=\"Preview type\""],
   ["'자'", "''"]
 ]} -->
+<!-- @zh {
+  "title": "实时搜索结果预览",
+  "summary": "在页面设置里输入标题和描述，下面的搜索结果预览会跟着每次按键实时变化，每块输入框下的小条也会涨向推荐长度。标题太长时，小条会变红溢出，预览里的标题也会被省略号截断。点上方的“链接分享”标签，可以切换成把链接粘贴到聊天软件里会看到的卡片。",
+  "hint": "给标题多加几个字，再切换到“链接分享”标签",
+  "map": [
+    [
+      ">제목<",
+      ">标题<"
+    ],
+    [
+      ">설명<",
+      ">描述<"
+    ],
+    [
+      "value=\"Lumen 사이트 빌더\"",
+      "value=\"Lumen 建站工具\""
+    ],
+    [
+      ">코드 없이 10분 만에 브랜드 사이트를 만들고, 도메인 연결과 SEO까지 한 번에 끝내세요.<",
+      ">不用写代码，10 分钟做好品牌网站，域名连接和 SEO 一次搞定。<"
+    ],
+    [
+      "var TABS = ['검색 결과', '링크 공유']",
+      "var TABS = ['搜索结果', '链接分享']"
+    ],
+    [
+      "aria-label=\"페이지 제목\"",
+      "aria-label=\"页面标题\""
+    ],
+    [
+      "aria-label=\"페이지 설명\"",
+      "aria-label=\"页面描述\""
+    ],
+    [
+      "aria-label=\"미리보기 종류\"",
+      "aria-label=\"预览类型\""
+    ],
+    [
+      "'자'",
+      "''"
+    ]
+  ]
+} -->
 <style>
 .u249{position:relative;width:340px;height:340px;border-radius:30px;overflow:hidden;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);color:var(--ux-ink)}
 .u249-fm{position:absolute;left:16px;right:16px;top:14px}

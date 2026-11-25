@@ -1,5 +1,5 @@
 <!-- @meta {"title":"물결 위를 흐르는 문구","category":"텍스트 모션","summary":"문구가 출렁이는 물결 곡선을 따라 끝없이 흘러갑니다. 물결 높이와 흐름 속도를 바꾸면 곡선이 바로 다시 그려지고, 글자는 곡선의 기울기에 맞춰 눕거나 섭니다. 입력창에 쓴 글이 그대로 물결 위에 올라탑니다.","hint":"입력창에 원하는 문구를 쓰고, 아래 슬라이더로 물결 높이와 속도를 바꿔 보세요","shape":"square","tags":["text","svg","path","wave","marquee"]} -->
-<!-- @demo [["wait",1200],["set",".u382-h",0,"34",900],["set",".u382-s",0,"90",1300],["erase",".u382-in",0,"all",25],["type",".u382-in",0,{"ko":"파도를 타는 글자들","en":"letters riding the wave"},70],["set",".u382-h",0,"8",1200],["set",".u382-s",0,"40",1200],["set",".u382-h",0,"20",600]] -->
+<!-- @demo [["wait",1200],["set",".u382-h",0,"34",900],["set",".u382-s",0,"90",1300],["erase",".u382-in",0,"all",25],["type",".u382-in",0,{"ko":"파도를 타는 글자들","en":"letters riding the wave","zh":"乘着波浪的文字"},70],["set",".u382-h",0,"8",1200],["set",".u382-s",0,"40",1200],["set",".u382-h",0,"20",600]] -->
 <!-- @en {"title":"Text flowing along a wave","summary":"A line of text flows endlessly along a rippling wave. Change the wave height or flow speed and the curve is redrawn at once, with each letter leaning or standing up to match the slope. Whatever you type in the field rides the wave.","hint":"Type your own line in the field, then change the wave height and speed with the sliders","map":[
   ["value=\"오늘도 천천히 흘러가는 중\"", "value=\"drifting along slowly today\""],
   ["aria-label=\"물결 위 문구\"", "aria-label=\"Text on the wave\""],
@@ -7,6 +7,14 @@
   [">속도<", ">Speed<"],
   ["aria-label=\"물결 높이\"", "aria-label=\"Wave height\""],
   ["aria-label=\"흐름 속도\"", "aria-label=\"Flow speed\""]
+]} -->
+<!-- @zh {"title":"沿着波浪流动的文字","summary":"一行文字沿着起伏的波浪曲线不停流动。改一下波浪高度或流动速度，曲线马上重画，每个字母顺着坡度或躺或立。在输入框里写什么，什么就上到波浪上去。","hint":"在输入框里写一句话，再用下面的滑块改波浪高度和速度","map":[
+  ["value=\"오늘도 천천히 흘러가는 중\"", "value=\"今天也在慢慢漂流\""],
+  ["aria-label=\"물결 위 문구\"", "aria-label=\"波浪上的文字\""],
+  [">높이<", ">高度<"],
+  [">속도<", ">速度<"],
+  ["aria-label=\"물결 높이\"", "aria-label=\"波浪高度\""],
+  ["aria-label=\"흐름 속도\"", "aria-label=\"流动速度\""]
 ]} -->
 <style>
 .u382{position:relative;width:340px;height:320px;display:flex;flex-direction:column;padding:16px;border-radius:28px;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);overflow:hidden}

@@ -10,6 +10,45 @@
   [">브랜드<", ">brands<"],
   [">내일<", ">tomorrow<"]
 ]} -->
+<!-- @zh {
+  "title": "打字机式轮换关键词",
+  "summary": "句子末尾的关键词会被像打字机一样删掉、重打一遍。韩文会像输入法组字那样一个字母一个字母拼出来，每个词的下划线颜色也不一样。闲置时光标闪烁，打字时光标停住。",
+  "hint": "点下面的标签立刻重打这个词；把鼠标悬停在句子上可以暂停轮换",
+  "map": [
+    [
+      "var WORDS = ['제품', '경험', '브랜드', '내일'];",
+      "var WORDS = ['产品', '体验', '品牌', '明天'];"
+    ],
+    [
+      "<span class=\"u307-a\">우리가 함께 만드는 건</span>",
+      "<span class=\"u307-a\">我们一起创造的，是</span>"
+    ],
+    [
+      "<span class=\"u307-tail\">입니다</span>",
+      "<span class=\"u307-tail\">。</span>"
+    ],
+    [
+      "aria-label=\"단어 바꾸기\"",
+      "aria-label=\"换词\""
+    ],
+    [
+      ">제품<",
+      ">产品<"
+    ],
+    [
+      ">경험<",
+      ">体验<"
+    ],
+    [
+      ">브랜드<",
+      ">品牌<"
+    ],
+    [
+      ">내일<",
+      ">明天<"
+    ]
+  ]
+} -->
 <style>
 .u307{position:relative;width:340px;height:272px;display:flex;flex-direction:column;padding:24px 22px 18px;border-radius:28px;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);overflow:hidden;--c:var(--ux-accent)}
 .u307::after{content:"";position:absolute;right:-60px;top:-70px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--c) 26%,transparent),transparent 70%);transition:background .6s var(--ux-ease);pointer-events:none}

@@ -1,5 +1,5 @@
 <!-- @meta {"title":"검색되는 담당자 선택","category":"입력·검색","summary":"담당자 선택 버튼을 누르면 네 사람의 목록이 스프링처럼 펼쳐집니다. 이름을 치면 바로 걸러지고, 고르면 체크 표시가 그 사람 옆으로 톡 튀어 오르며 버튼에도 새 담당자가 들어갑니다.","hint":"목록에서 사람을 고르거나, 검색칸에 이름을 쳐 보세요. ↑↓와 Enter도 됩니다","shape":"square","hue":"#3D8BFF","hue2":"#22C3A6","tags":["select","combobox","searchable","filter","assignee","spring"]} -->
-<!-- @demo [["wait",900],["type",".u430-q",0,{"ko":"박","en":"jih"},260],["wait",650],["key",".u430-q",0,"Enter",1,200],["wait",1100],["tap",".u430-tr",0,{"after":900}],["tap",".u430-o",3,{"after":1300}],["reset"]] -->
+<!-- @demo [["wait",900],["type",".u430-q",0,{"ko":"박","en":"jih","zh":"jih"},260],["wait",650],["key",".u430-q",0,"Enter",1,200],["wait",1100],["tap",".u430-tr",0,{"after":900}],["tap",".u430-o",3,{"after":1300}],["reset"]] -->
 <!-- @en {"title":"Searchable assignee select","summary":"Press the assignee button and a list of four people springs open. Type a name and it filters instantly; pick someone and the check mark pops over to them while the button takes on the new assignee.","hint":"Pick someone from the list, or type a name in the search field. ↑↓ and Enter work too","map":[
   ["aria-label=\"담당자 선택\"", "aria-label=\"Choose assignee\""],
   ["aria-label=\"이름 검색\"", "aria-label=\"Search names\""],
@@ -15,6 +15,22 @@
   ["'백엔드 개발자'", "'Backend engineer'"],
   ["'이수민'", "'Sumin Lee'"],
   ["'그로스 마케터'", "'Growth marketer'"]
+]} -->
+<!-- @zh {"title":"可搜索的负责人选择器", "summary":"点负责人按钮，四个人的列表弹出来。输入名字立刻筛选；选一个人，对勾就弹到他那一行，按钮也换成新负责人。", "hint":"从列表里选一个人，或在搜索框里输名字。↑↓ 和回车也能用", "map":[
+  ["aria-label=\"담당자 선택\"", "aria-label=\"选择负责人\""],
+  ["aria-label=\"이름 검색\"", "aria-label=\"搜索姓名\""],
+  ["placeholder=\"이름 검색\"", "placeholder=\"搜索姓名\""],
+  ["aria-label=\"담당자\"", "aria-label=\"负责人\""],
+  ["'일치하는 사람이 없어요'", "'没有匹配的人'"],
+  ["'담당자: {n}'", "'负责人：{n}'"],
+  ["'한서연'", "'Seoyeon Han'"],
+  ["'프로덕트 디자이너'", "'产品设计师'"],
+  ["'박지훈'", "'Jihoon Park'"],
+  ["'프론트엔드 개발자'", "'前端工程师'"],
+  ["'김민재'", "'Minjae Kim'"],
+  ["'백엔드 개발자'", "'后端工程师'"],
+  ["'이수민'", "'Sumin Lee'"],
+  ["'그로스 마케터'", "'增长营销'"]
 ]} -->
 <style>
 .u430{position:relative;width:340px;height:300px}

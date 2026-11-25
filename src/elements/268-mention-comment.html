@@ -1,5 +1,5 @@
 <!-- @meta {"title":"@를 치면 따라 뜨는 멘션 목록","category":"앱 화면","summary":"댓글 칸에 @를 치면 커서 바로 아래에 팀원 목록이 튀어나오고, 이어 치는 글자로 이름이 걸러지며 맞는 글자가 진하게 보입니다. 위아래 화살표로 고르고 Enter나 클릭으로 넣으면 @이름이 색 칠한 멘션으로 바뀌어 글 속에 들어가고, 아래에는 알림을 받을 사람이 아바타로 쌓입니다.","hint":"댓글 칸에 @와 이름 첫 글자를 쳐서 팀원을 골라 보세요","shape":"square","tags":["mention","comment","autocomplete","collaboration","textarea"]} -->
-<!-- @demo [["wait",700],["tap",".u268-ta",0,{"after":200}],["type",".u268-ta",0,{"ko":"시안 확인 부탁해요 @서","en":"Can you check the draft @S"},85],["wait",1000],["tap",".u268-op",0,{"after":900}],["type",".u268-ta",0,{"ko":"님 ","en":"thanks "},90],["wait",1400],["reset"]] -->
+<!-- @demo [["wait",700],["tap",".u268-ta",0,{"after":200}],["type",".u268-ta",0,{"ko":"시안 확인 부탁해요 @서","en":"Can you check the draft @S","zh":"能帮我看下设计稿吗 @S"},85],["wait",1000],["tap",".u268-op",0,{"after":900}],["type",".u268-ta",0,{"ko":"님 ","en":"thanks ","zh":"谢谢 "},90],["wait",1400],["reset"]] -->
 <!-- @en {"title":"Mention list that follows @","summary":"Type @ in a comment box and a list of teammates pops out right under the cursor, narrowing by name as you keep typing with the matching letters in bold. Choose with the up and down arrows and press Enter or click, and @name becomes a highlighted mention in your text while the people who'll be notified stack up as avatars below.","hint":"Type @ and the first letter of a name in the comment box, then pick a teammate","map":[
   [">댓글<", ">Comments<"],
   ["var PP = [['김서연', '디자인', '#EC4899'], ['박서준', '개발', '#0EA5E9'], ['이도윤', '기획', '#10B981'], ['최하은', '마케팅', '#F59E0B'], ['정민재', '개발', '#8B5CF6']]", "var PP = [['Seoyeon Kim', 'Design', '#EC4899'], ['Seojun Park', 'Engineering', '#0EA5E9'], ['Doyun Lee', 'Product', '#10B981'], ['Haeun Choi', 'Marketing', '#F59E0B'], ['Minjae Jung', 'Engineering', '#8B5CF6']]"],
@@ -11,6 +11,49 @@
   ["'맞는 팀원이 없어요'", "'No matching teammates'"],
   [">랜딩 페이지 새 시안 올렸어요. 첫 화면 위주로 봐 주세요!<", ">New landing page draft is up. Focus on the first screen, please!<"]
 ]} -->
+<!-- @zh {
+  "title": "跟着 @ 走的提及列表",
+  "summary": "在评论框里输入 @，队友列表会正好弹在光标下方，继续输入名字还会按名字筛选，匹配的字母加粗。上下键选择，回车或点击确认，@名字就会变成正文里高亮的提及，下面还会把要通知的人以头像叠起来。",
+  "hint": "在评论框里输入 @ 和名字的首字母，再挑一位队友",
+  "map": [
+    [
+      ">댓글<",
+      ">评论<"
+    ],
+    [
+      "var PP = [['김서연', '디자인', '#EC4899'], ['박서준', '개발', '#0EA5E9'], ['이도윤', '기획', '#10B981'], ['최하은', '마케팅', '#F59E0B'], ['정민재', '개발', '#8B5CF6']]",
+      "var PP = [['Seoyeon Kim', '设计', '#EC4899'], ['Seojun Park', '开发', '#0EA5E9'], ['Doyun Lee', '策划', '#10B981'], ['Haeun Choi', '市场', '#F59E0B'], ['Minjae Jung', '开发', '#8B5CF6']]"
+    ],
+    [
+      "placeholder=\"댓글을 남기세요. @로 팀원을 부를 수 있어요\"",
+      "placeholder=\"写条评论，用 @ 提及队友\""
+    ],
+    [
+      "aria-label=\"댓글\"",
+      "aria-label=\"评论\""
+    ],
+    [
+      ">알림 받을 사람<",
+      ">会收到通知的人<"
+    ],
+    [
+      ">보내기<",
+      ">发送<"
+    ],
+    [
+      "aria-label=\"팀원\"",
+      "aria-label=\"队友\""
+    ],
+    [
+      "'맞는 팀원이 없어요'",
+      "'没有匹配的队友'"
+    ],
+    [
+      ">랜딩 페이지 새 시안 올렸어요. 첫 화면 위주로 봐 주세요!<",
+      ">落地页新设计稿发出来了，重点看首屏！<"
+    ]
+  ]
+} -->
 <style>
 .u268{position:relative;width:340px;height:340px;border-radius:30px;overflow:hidden;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);color:var(--ux-ink)}
 .u268-hd{position:absolute;left:20px;top:20px;font-size:15px;font-weight:900}

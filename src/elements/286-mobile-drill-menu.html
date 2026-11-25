@@ -10,6 +10,45 @@
   ["aria-label=\"뒤로\"", "aria-label=\"Back\""],
   ["' 하위 메뉴'", "' submenu'"]
 ]} -->
+<!-- @zh {
+  "title": "层层进入的手机菜单",
+  "summary": "点手机站的汉堡按钮，三条线变成叉，菜单带着条目一条接一条落下来。点带子菜单的条目，下一级列表从右侧滑进来，当前列表微微左移，顶部的返回按钮和当前位置标题也跟着变。点返回就按原路回去。",
+  "hint": "点汉堡按钮，进入带箭头的菜单，再返回来",
+  "map": [
+    [
+      "var TREE = {t: '메뉴', c: [{t: '제품', c: [{t: '협업 도구'}, {t: 'AI 도구', c: [{t: '요약'}, {t: '번역'}, {t: '회의록'}]}, {t: '연동'}]}, {t: '요금'}, {t: '고객 사례', c: [{t: '스타트업'}, {t: '대기업'}]}, {t: '블로그'}, {t: '고객 지원'}]}",
+      "var TREE = {t: '菜单', c: [{t: '产品', c: [{t: '协作工具'}, {t: 'AI 工具', c: [{t: '摘要'}, {t: '翻译'}, {t: '会议记录'}]}, {t: '集成'}]}, {t: '定价'}, {t: '客户案例', c: [{t: '创业公司'}, {t: '大企业'}]}, {t: '博客'}, {t: '客服支持'}]}"
+    ],
+    [
+      ">로그인<",
+      ">登录<"
+    ],
+    [
+      ">무료로 시작<",
+      ">免费开始<"
+    ],
+    [
+      ">오늘 할 일을<br>가볍게<",
+      ">让今天的工作<br>更轻松<"
+    ],
+    [
+      "'메뉴 열기'",
+      "'打开菜单'"
+    ],
+    [
+      "'메뉴 닫기'",
+      "'关闭菜单'"
+    ],
+    [
+      "aria-label=\"뒤로\"",
+      "aria-label=\"返回\""
+    ],
+    [
+      "' 하위 메뉴'",
+      "' 子菜单'"
+    ]
+  ]
+} -->
 <style>
 .u286{position:relative;width:300px;height:480px;border-radius:32px;overflow:hidden;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);color:var(--ux-ink)}
 .u286-top{position:absolute;left:0;right:0;top:0;z-index:3;display:flex;align-items:center;height:56px;padding:0 14px 0 18px;background:var(--ux-surface)}

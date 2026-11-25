@@ -7,6 +7,13 @@
   ["row: function (s, n, p) { return s + '점 ' + n + '개, ' + p + '%'; }", "row: function (s, n, p) { return s + ' stars: ' + n + ' reviews, ' + p + '%'; }"],
   ["cnt: function (n) { return n.toLocaleString('ko-KR') + '개'; }", "cnt: function (n) { return n.toLocaleString('en-US'); }"]
 ]} -->
+<!-- @zh {"title":"评分汇总", "summary":"只有平均分和分布的评分汇总。进入视野时，4.6 从 0 开始数上去，星星从左往右半颗半颗填满，五条柱子一个接一个长满。鼠标移到某条柱子上，只有那行亮起来，百分比变成评价数。", "hint":"把鼠标移到柱子上", "map":[
+  [">리뷰 1,284개<", ">1,284 条评价<"],
+  ["aria-label=\"별점 분포\"", "aria-label=\"评分分布\""],
+  ["avg: '5점 만점에 4.6점'", "avg: '5 分满分 4.6 分'"],
+  ["row: function (s, n, p) { return s + '점 ' + n + '개, ' + p + '%'; }", "row: function (s, n, p) { return s + '星 ' + n + '条评价，' + p + '%'; }"],
+  ["cnt: function (n) { return n.toLocaleString('ko-KR') + '개'; }", "cnt: function (n) { return n.toLocaleString('zh-CN'); }"]
+]} -->
 <style>
 .u446{position:relative;width:340px;height:300px;display:grid;place-items:center;--am:#F5A524;--am:light-dark(#F5A524,#FFBE3D)}
 .u446-w{display:flex;align-items:center;gap:22px;width:300px}

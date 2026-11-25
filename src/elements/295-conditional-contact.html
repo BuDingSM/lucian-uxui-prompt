@@ -1,5 +1,5 @@
 <!-- @meta {"title":"문의 종류에 따라 바뀌는 문의 폼","category":"폼·입력","summary":"문의하기 폼 위쪽에서 도입 문의·기술 지원·제휴 중 하나를 고르면 알약이 미끄러지고, 그 아래 칸들이 접혔다 펼쳐지며 종류에 맞는 질문으로 바뀝니다. 기술 지원에서 화면 첨부를 누르면 파일 칩이 생기며 올라가는 막대가 찹니다. 내용 칸 옆 고리는 쓴 글자 수만큼 차오르고, 보내기를 누르면 문의 번호가 적힌 접수 완료 카드로 넘어갑니다.","hint":"문의 종류를 바꿔 보고, 내용을 써서 보내 보세요","shape":"tall","tags":["contact-form","conditional","form","attachment","support"]} -->
-<!-- @demo [["wait",700],["tap",".u295-tp",1,{"after":900}],["tap",".u295-at",0,{"after":1500}],["tap",".u295-tp",0,{"after":900}],["tap",".u295-sz",1,{"after":500}],["tap",".u295-tx",0,{"after":200}],["type",".u295-tx",0,{"ko":"20명 팀 견적 부탁드려요","en":"Quote for a 20-person team, please"},70],["tap",".u295-go",0,{"after":2600}],["reset"]] -->
+<!-- @demo [["wait",700],["tap",".u295-tp",1,{"after":900}],["tap",".u295-at",0,{"after":1500}],["tap",".u295-tp",0,{"after":900}],["tap",".u295-sz",1,{"after":500}],["tap",".u295-tx",0,{"after":200}],["type",".u295-tx",0,{"ko":"20명 팀 견적 부탁드려요","en":"Quote for a 20-person team, please","zh":"麻烦给 20 人团队报个价"},70],["tap",".u295-go",0,{"after":2600}],["reset"]] -->
 <!-- @en {"title":"Contact form that adapts to the request","summary":"Choose Sales, Support or Partnership at the top of a contact form and the pill slides over while the fields below fold and unfold into questions for that type. In Support, pressing Attach screenshot adds a file chip whose upload bar fills. The ring beside the message box fills with the characters you've typed, and Send moves you to a received card with a ticket number.","hint":"Switch the request type, write a message and send it","map":[
   [">문의하기<", ">Contact us<"],
   [">보통 하루 안에 답장해요<", ">We usually reply within a day<"],
@@ -29,6 +29,121 @@
   [">문의 번호<", ">Ticket<"],
   ["aria-label=\"첨부 지우기\"", "aria-label=\"Remove attachment\""]
 ]} -->
+<!-- @zh {
+  "title": "按需求变形的联系表单",
+  "summary": "在联系表单顶部选购买咨询、技术支持或商务合作，药丸滑过去，下面的字段会收起、展开，变成对应类型的问题。选技术支持时，点“上传截图”会加一个文件标签，上传进度条慢慢填满。消息框旁边的圆环会随着输入的字数填满，点“发送”进入一张带工单号的已收到卡片。",
+  "hint": "切换需求类型，写段话发出去",
+  "map": [
+    [
+      ">문의하기<",
+      ">联系我们<"
+    ],
+    [
+      ">보통 하루 안에 답장해요<",
+      ">一般一天内回复<"
+    ],
+    [
+      "var TP = ['도입 문의', '기술 지원', '제휴']",
+      "var TP = ['购买咨询', '技术支持', '商务合作']"
+    ],
+    [
+      ">회사 이름<",
+      ">公司名称<"
+    ],
+    [
+      "placeholder=\"예: 루시안랩스\"",
+      "placeholder=\"例如：Lucian Labs\""
+    ],
+    [
+      ">팀 규모<",
+      ">团队规模<"
+    ],
+    [
+      ">1–10명<",
+      ">1–10 人<"
+    ],
+    [
+      ">11–50명<",
+      ">11–50 人<"
+    ],
+    [
+      ">51명 이상<",
+      ">51 人以上<"
+    ],
+    [
+      ">문제가 생긴 곳<",
+      ">哪里出了问题？<"
+    ],
+    [
+      ">로그인<",
+      ">登录<"
+    ],
+    [
+      ">결제<",
+      ">账单<"
+    ],
+    [
+      ">기타<",
+      ">其他<"
+    ],
+    [
+      ">화면 첨부<",
+      ">上传截图<"
+    ],
+    [
+      ">웹사이트<",
+      ">网站<"
+    ],
+    [
+      ">제휴 형태<",
+      ">合作类型<"
+    ],
+    [
+      ">연동<",
+      ">集成合作<"
+    ],
+    [
+      ">재판매<",
+      ">分销合作<"
+    ],
+    [
+      ">공동 마케팅<",
+      ">联合营销<"
+    ],
+    [
+      ">내용<",
+      ">留言内容<"
+    ],
+    [
+      "aria-label=\"문의 종류\"",
+      "aria-label=\"需求类型\""
+    ],
+    [
+      "aria-label=\"문의 내용\"",
+      "aria-label=\"留言内容\""
+    ],
+    [
+      ">보내기<",
+      ">发送<"
+    ],
+    [
+      ">문의가 접수됐어요<",
+      ">已收到你的留言<"
+    ],
+    [
+      ">답장은 이메일로 보내 드릴게요<",
+      ">我们会通过邮件回复<"
+    ],
+    [
+      ">문의 번호<",
+      ">工单号<"
+    ],
+    [
+      "aria-label=\"첨부 지우기\"",
+      "aria-label=\"删除附件\""
+    ]
+  ]
+} -->
 <style>
 .u295{position:relative;width:300px;height:480px;border-radius:32px;overflow:hidden;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);color:var(--ux-ink)}
 .u295-fm{position:absolute;inset:0;padding:24px 18px 18px;display:flex;flex-direction:column;transition:opacity .3s,transform .4s}

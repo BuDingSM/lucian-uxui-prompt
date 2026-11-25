@@ -1,5 +1,5 @@
 <!-- @meta {"title":"화면 위에 꽂는 피드백 핀","category":"빌더 도구","summary":"사이트 미리보기에서 댓글 모드를 켜면 포인터가 조준선으로 바뀌고, 아무 곳이나 누르면 번호 핀이 통통 떨어지며 옆에 의견 칸이 열립니다. 의견을 남기면 칸이 핀 속으로 접히고 오른쪽 위 의견 수가 늘어납니다. 핀을 다시 누르면 말풍선이 열리고, 해결을 누르면 핀이 초록 체크로 바뀌며 흐려집니다.","hint":"댓글 모드를 켜고 미리보기 아무 곳이나 눌러 의견을 남겨 보세요","shape":"square","tags":["feedback","comments","pins","review","builder"]} -->
-<!-- @demo [["wait",800],["tap",".u302-md",0,{"after":600}],["tap",".u302-pg",0,{"fx":0.7,"fy":0.36,"after":500}],["type",".u302-ta",0,{"ko":"버튼 색을 더 진하게 해 주세요","en":"Make this button a bit darker"},55],["tap",".u302-ok",0,{"after":900}],["tap",".u302-pg",0,{"fx":0.28,"fy":0.78,"after":500}],["type",".u302-ta",0,{"ko":"사진이 잘려요","en":"The photo gets cropped"},60],["tap",".u302-ok",0,{"after":900}],["tap",".u302-pn",0,{"after":900}],["tap",".u302-rv",0,{"after":1300}],["reset"]] -->
+<!-- @demo [["wait",800],["tap",".u302-md",0,{"after":600}],["tap",".u302-pg",0,{"fx":0.7,"fy":0.36,"after":500}],["type",".u302-ta",0,{"ko":"버튼 색을 더 진하게 해 주세요","en":"Make this button a bit darker","zh":"这个按钮的颜色再调深一点"},55],["tap",".u302-ok",0,{"after":900}],["tap",".u302-pg",0,{"fx":0.28,"fy":0.78,"after":500}],["type",".u302-ta",0,{"ko":"사진이 잘려요","en":"The photo gets cropped","zh":"照片被裁掉了"},60],["tap",".u302-ok",0,{"after":900}],["tap",".u302-pn",0,{"after":900}],["tap",".u302-rv",0,{"after":1300}],["reset"]] -->
 <!-- @en {"title":"Feedback pins on the page","summary":"Turn on comment mode in a site preview and the pointer becomes a crosshair; click anywhere and a numbered pin drops with a bounce as a comment box opens beside it. Post the comment and the box folds into the pin while the comment count in the top right goes up. Click a pin again to open its bubble, and Resolve turns the pin into a green check and fades it.","hint":"Turn on comment mode and click anywhere in the preview to leave feedback","map":[
   [">댓글 모드<", ">Comment mode<"],
   ["'개 의견'", "' comments'"],
@@ -14,6 +14,61 @@
   ["'방금'", "'now'"],
   ["' 의견 보기'", "' — view comment'"]
 ]} -->
+<!-- @zh {
+  "title": "钉在页面上的反馈",
+  "summary": "在网站预览里打开评论模式，指针变成十字准星；点任意位置，一个带编号的图钉会弹着落下，旁边打开评论框。发出去后评论框收进图钉，右上角的评论数加一。再点图钉会打开它的气泡，点“解决”，图钉变成绿色对勾、慢慢淡去。",
+  "hint": "打开评论模式，在预览里随便点个地方留言",
+  "map": [
+    [
+      ">댓글 모드<",
+      ">评论模式<"
+    ],
+    [
+      "'개 의견'",
+      "' 条意见'"
+    ],
+    [
+      ">봄 신상 컬렉션<",
+      ">春季新品系列<"
+    ],
+    [
+      ">지금 보러 가기<",
+      ">现在去看看<"
+    ],
+    [
+      "placeholder=\"의견을 남겨 주세요\"",
+      "placeholder=\"写下你的意见\""
+    ],
+    [
+      "aria-label=\"의견\"",
+      "aria-label=\"意见\""
+    ],
+    [
+      ">남기기<",
+      ">发布<"
+    ],
+    [
+      "'해결'",
+      "'解决'"
+    ],
+    [
+      "'해결됨'",
+      "'已解决'"
+    ],
+    [
+      "'민지'",
+      "'Minji'"
+    ],
+    [
+      "'방금'",
+      "'刚刚'"
+    ],
+    [
+      "' 의견 보기'",
+      "' — 查看意见'"
+    ]
+  ]
+} -->
 <style>
 .u302{position:relative;width:340px;height:340px;border-radius:30px;overflow:hidden;background:var(--ux-surface-2);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);color:var(--ux-ink)}
 .u302-tb{position:absolute;left:12px;right:12px;top:12px;display:flex;align-items:center;gap:8px}

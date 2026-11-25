@@ -1,5 +1,5 @@
 <!-- @meta {"title":"제목 바로 고치기","category":"입력·검색","summary":"제목을 누르면 같은 글꼴 그대로 입력칸이 되고, 아래 밑줄이 왼쪽부터 그어집니다. Enter로 저장하면 초록 빛이 훑고 지나가며 수정 시간이 바뀌고, Esc를 누르면 원래 제목으로 돌아갑니다.","hint":"제목이나 연필 아이콘을 눌러 고쳐 보세요. Enter로 저장, Esc로 취소합니다","shape":"square","hue":"#3D8BFF","hue2":"#FFB547","tags":["inline-edit","input","title","save","cancel"]} -->
-<!-- @demo [["wait",700],["tap",".u033-view"],["wait",500],["erase",".u033-in",0,"all",30],["type",".u033-in",0,{"ko":"Q4 런칭 캠페인","en":"Q4 launch plan"},110],["wait",400],["key",".u033-in",0,"Enter"],["wait",2200],["tap",".u033-view"],["wait",400],["type",".u033-in",0,{"ko":" 초안","en":" draft"},120],["wait",500],["key",".u033-in",0,"Escape"],["wait",1700],["reset"]] -->
+<!-- @demo [["wait",700],["tap",".u033-view"],["wait",500],["erase",".u033-in",0,"all",30],["type",".u033-in",0,{"ko":"Q4 런칭 캠페인","en":"Q4 launch plan","zh":"Q4 上线计划"},110],["wait",400],["key",".u033-in",0,"Enter"],["wait",2200],["tap",".u033-view"],["wait",400],["type",".u033-in",0,{"ko":" 초안","en":" draft","zh":" 草稿"},120],["wait",500],["key",".u033-in",0,"Escape"],["wait",1700],["reset"]] -->
 <!-- @en {"title":"Inline title editing","summary":"Press the title and it becomes a field in the very same type, with an underline drawn from the left. Save with Enter and a green gleam sweeps across while the edit time updates; Esc puts the original title back.","hint":"Press the title or the pencil icon to edit it. Enter saves, Esc cancels","map":[
   ["마케팅 <span aria-hidden=\"true\">/</span> 기획 문서", "Marketing <span aria-hidden=\"true\">/</span> Planning"],
   ["제목 고치기: Q4 캠페인 기획서", "Edit title: Q4 campaign plan"],
@@ -13,6 +13,7 @@
   ["3분 전 수정", "Edited 3 min ago"],
   ["방금 저장됨", "Saved just now"]
 ]} -->
+<!-- @zh {"title": "行内编辑标题", "summary": "点标题，它会原地变成同样字体的输入框，下划线从左向右画出来。回车保存，绿色亮光扫过，编辑时间也更新；Esc 恢复原标题。", "hint": "点标题或铅笔图标编辑，回车保存，Esc 取消", "map": [["마케팅 <span aria-hidden=\"true\">/</span> 기획 문서", "市场营销 <span aria-hidden=\"true\">/</span> 策划文档"], ["제목 고치기: Q4 캠페인 기획서", "编辑标题：Q4 推广计划"], ["Q4 캠페인 기획서", "Q4 推广计划"], ["'제목 고치기: '", "'编辑标题：'"], ["제목 고치기", "编辑标题"], ["문서 제목", "文档标题"], ["\"저장\"", "\"保存\""], ["\"취소\"", "\"取消\""], ["윤서준 · ", "Seojun Yoon · "], ["3분 전 수정", "3 分钟前修改"], ["방금 저장됨", "刚刚已保存"]]} -->
 <style>
 .u033{position:relative;width:350px;height:210px;display:flex;flex-direction:column;justify-content:center;padding:0 24px;border-radius:26px;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 26px 50px -34px var(--ux-shadow-strong)}
 .u033-crumb{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--ux-ink-3)}

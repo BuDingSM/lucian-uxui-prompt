@@ -1,5 +1,5 @@
 <!-- @meta {"title":"커맨드 팔레트","category":"메뉴·탭","summary":"검색 알약이 아래로 펼쳐지며 팔레트가 되고, 입력하면 결과가 걸러지며 맞는 글자가 강조됩니다. 강조 막대는 고른 항목으로 미끄러지고, 실행하면 팔레트가 다시 알약으로 접힙니다.","hint":"입력해서 명령을 걸러 보세요. 위아래 방향키로 고르고 Enter로 실행, Esc로 접습니다. 접힌 알약은 클릭하거나 Ctrl/⌘+K로 다시 엽니다","shape":"square","hue":"#F59E0B","hue2":"#3D8BFF","tags":["command-palette","combobox","search","keyboard","filter"]} -->
-<!-- @demo [["wait",700],["tap",".u046-in"],["type",".u046-in",0,{"ko":"다크","en":"dark"},160],["wait",900],["key",".u046-in",0,"Enter"],["wait",1700],["tap",".u046-field"],["wait",800],["key",".u046-in",0,"ArrowDown",3,380],["wait",400],["key",".u046-in",0,"Enter"],["wait",1700],["tap",".u046-field"],["wait",1200]] -->
+<!-- @demo [["wait",700],["tap",".u046-in"],["type",".u046-in",0,{"ko":"다크","en":"dark","zh":"深色"},160],["wait",900],["key",".u046-in",0,"Enter"],["wait",1700],["tap",".u046-field"],["wait",800],["key",".u046-in",0,"ArrowDown",3,380],["wait",400],["key",".u046-in",0,"Enter"],["wait",1700],["tap",".u046-field"],["wait",1200]] -->
 <!-- @en {"title":"Command palette","summary":"The search pill unfolds downward into a palette; as you type, results filter with the matching letters highlighted. The highlight bar glides to the chosen item, and running it folds the palette back into a pill.","hint":"Type to filter commands. Choose with the up and down arrows, run with Enter and fold it with Esc. Click the folded pill or press Ctrl/⌘+K to reopen it","map":[
   ["검색하거나 명령 입력", "Search or type a command"],
   ["명령 검색", "Search commands"],
@@ -18,6 +18,7 @@
   ["\"><b>‘' + esc(input.value.trim()) + '’ 결과가 없어요</b>다른 낱말로 찾아보세요</li>'", "\"><b>No results for ‘' + esc(input.value.trim()) + '’</b>Try another word</li>'"],
   ["'‘' + name + '’ 실행됨'", "'Ran ‘' + name + '’'"]
 ]} -->
+<!-- @zh {"title": "命令面板", "summary": "搜索框向下展开成命令面板，输入时结果实时筛选，匹配的字母高亮。高亮条滑向选中的项，执行后，面板又收回成小药丸。", "hint": "输入筛选命令，上下键选择，回车执行，Esc 收起。点收起的小药丸或按 Ctrl/⌘+K 可以重新打开", "map": [["검색하거나 명령 입력", "搜索或输入命令"], ["명령 검색", "搜索命令"], ["aria-label=\"명령\"", "aria-label=\"命令\""], ["</kbd>이동</span>", "</kbd>移动</span>"], ["</kbd>실행</span>", "</kbd>运行</span>"], ["'최근 파일'", "'最近文件'"], ["'명령'", "'命令'"], ["'브랜드 가이드 2026'", "'品牌指南 2026'"], ["'봄 캠페인 랜딩'", "'春季推广落地页'"], ["'분기 리포트 초안'", "'季度报告草稿'"], ["'새 문서 만들기'", "'新建文档'"], ["'다크 모드 전환'", "'切换深色模式'"], ["'팀원 초대하기'", "'邀请团队成员'"], ["'PDF로 내보내기'", "'导出为 PDF'"], ["\"><b>‘' + esc(input.value.trim()) + '’ 결과가 없어요</b>다른 낱말로 찾아보세요</li>'", "\"><b>没有与‘' + esc(input.value.trim()) + '’匹配的结果</b>换个词试试</li>'"], ["'‘' + name + '’ 실행됨'", "'已执行‘' + name + '’'"]]} -->
 <style>
 .u046{position:relative;width:360px;height:460px}
 .u046-pal{position:absolute;left:0;right:0;top:0;height:100%;display:flex;flex-direction:column;border-radius:24px;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 34px 60px -34px var(--ux-shadow-strong);clip-path:inset(0 0 0 0 round 24px);transition:clip-path .6s var(--ux-ease),box-shadow .5s}

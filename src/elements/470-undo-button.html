@@ -16,6 +16,22 @@
   ["del: function (n) { return n + ' 삭제됨. 5초 안에 되돌릴 수 있어요'; }", "del: function (n) { return n + ' deleted. You can undo for 5 seconds'; }"],
   ["back: function (n) { return n + ' 되돌림'; }", "back: function (n) { return n + ' restored'; }"]
 ]} -->
+<!-- @zh {"title":"撤销按钮", "summary":"点文件列表里的垃圾桶按钮，那行就滑到一边消失，下面的行滑上来补位。同时底部弹起一颗“撤销”小药丸，圆环在五秒里缩完，数字倒数。点它，那行就弹回来；不管它，小药丸掉下去，删除就生效了。鼠标放在小药丸上会暂停计时。", "hint":"用垃圾桶按钮删一行，再点“撤销”", "map":[
+  ["aria-label=\"파일\"", "aria-label=\"文件\""],
+  [">회의록_11월.pdf<", ">meeting-notes-nov.pdf<"],
+  [">브랜드 가이드.fig<", ">brand-guide.fig<"],
+  [">견적서_최종.xlsx<", ">quote-final.xlsx<"],
+  [">2.4MB · 어제<", ">2.4 MB · 昨天<"],
+  [">18MB · 3일 전<", ">18 MB · 3 天前<"],
+  [">86KB · 지난주<", ">86 KB · 上周<"],
+  ["aria-label=\"회의록_11월.pdf 삭제\"", "aria-label=\"删除 meeting-notes-nov.pdf\""],
+  ["aria-label=\"브랜드 가이드.fig 삭제\"", "aria-label=\"删除 brand-guide.fig\""],
+  ["aria-label=\"견적서_최종.xlsx 삭제\"", "aria-label=\"删除 quote-final.xlsx\""],
+  [">되돌리기<", ">撤销<"],
+  [">파일이 없어요<", ">没有文件<"],
+  ["del: function (n) { return n + ' 삭제됨. 5초 안에 되돌릴 수 있어요'; }", "del: function (n) { return n + ' 已删除，5 秒内可撤销'; }"],
+  ["back: function (n) { return n + ' 되돌림'; }", "back: function (n) { return n + ' 已恢复'; }"]
+]} -->
 <style>
 .u470{position:relative;width:340px;height:300px;display:flex;flex-direction:column;align-items:center;padding-top:42px}
 .u470-cd{width:284px;padding:6px;border-radius:20px;background:var(--ux-surface);background:light-dark(#FFFFFF,var(--ux-surface-2));box-shadow:0 0 0 1px var(--ux-line),0 22px 44px -24px var(--ux-shadow-strong),0 2px 6px -2px var(--ux-shadow)}

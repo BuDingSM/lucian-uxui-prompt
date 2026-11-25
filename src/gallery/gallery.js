@@ -6,9 +6,9 @@
   var DATA = JSON.parse(document.getElementById('ux-data').textContent);
   var ITEMS = DATA.items;
   var TOKENS = DATA.tokens.trim();
-  // 영어판 코드에는 한국어 주석을 뺀 토큰을 넣습니다
+  // 영어·중국어판 코드에는 한국어 주석을 뺀 토큰을 넣습니다
   var TOKENS_EN = uxLocalize(TOKENS, 'html', []).replace(/^\s*\n/, '');
-  function tokens() { return lang === 'en' ? TOKENS_EN : TOKENS; }
+  function tokens() { return lang === 'ko' ? TOKENS : TOKENS_EN; }
   var THEME_KEY = 'ux-gallery-theme';
   var LANG_KEY = 'ux-gallery-lang';
   var AUTO_KEY = 'ux-gallery-auto';
@@ -60,6 +60,36 @@
     '텍스트 모션': 'Text Motion', '히어로·배경': 'Hero & Backgrounds', '내비게이션': 'Navigation', '스크롤 모션': 'Scroll Motion',
     '섹션·콘텐츠': 'Sections & Content', '소셜 증명': 'Social Proof', '커머스·가격': 'Commerce & Pricing', '폼·입력': 'Forms & Input',
     '앱 화면': 'App Screens', '빌더 도구': 'Site Builder Tools', '커서·호버': 'Cursor & Hover', '프로모션·보상': 'Promos & Rewards', '데이터 모션': 'Data Motion'
+  };
+  var CAT_ZH = {
+    '전체': '全部',
+    "공간·일정·디자인 도구": "布局 · 日程 · 设计工具",
+    "내비게이션": "导航",
+    "데이터 모션": "数据动效",
+    "로그인·가입": "登录 · 注册",
+    "로딩·진행": "加载 · 进度",
+    "메뉴·탭": "菜单 · 标签页",
+    "문서·데이터 편집": "文档 · 数据编辑",
+    "버튼": "按钮",
+    "분석·데이터": "数据分析",
+    "빈·오류 상태": "空状态 · 报错",
+    "빌더 도구": "搭建工具",
+    "섹션·콘텐츠": "版块 · 内容",
+    "소셜 증명": "口碑证明",
+    "스크롤 모션": "滚动动效",
+    "알림·피드백": "通知 · 反馈",
+    "앱 화면": "应用界面",
+    "위젯·차트": "组件 · 图表",
+    "입력·검색": "输入 · 搜索",
+    "작업·시스템": "流程 · 系统",
+    "카드·콘텐츠": "卡片 · 内容",
+    "커머스·가격": "电商 · 价格",
+    "커서·호버": "光标 · 悬停",
+    "텍스트 모션": "文字动效",
+    "토글·선택": "开关 · 选择",
+    "폼·입력": "表单 · 输入",
+    "프로모션·보상": "促销 · 奖励",
+    "히어로·배경": "主视觉 · 背景"
   };
   var T = {
     ko: {
@@ -193,17 +223,90 @@
       tPromptCopied: 'Prompt copied', tCodeCopied: 'Code copied', tSelect: 'Text selected — press ⌘C to copy',
       tSaved: 'Code file saved', tCopyIn: 'Copy it from the prompt window',
       themeBtn: 'Switch theme', num: 'en-US'
-    }
+    },
+    zh: {
+
+      docTitle: 'Lucian UX/UI Prompt',
+      docDesc: '480 个真实可用的 UX/UI 元素。从卡片上直接复制 Claude 或 Codex 用的提示词、或代码，放到你的项目里。',
+      skip: '跳到元素列表',
+      brand: 'Lucian UX/UI Prompt，回到顶部',
+      guideBtn: '使用方法',
+      langGroup: '语言',
+      h1: 'Lucian UX/UI Prompt', w1: 'Lucian', w2: 'UX/UI', w3: 'Prompt',
+      intro: '480 个真实可运行的 UI 元素。在喜欢的卡片上点 Claude 或 Codex，粘贴进你的项目，AI 就会按你的项目把它做出来。',
+      side: '侧边栏', menuOpen: '打开菜单', menuClose: '关闭菜单',
+      browseH: '浏览', collH: '合集', takeH: '带走', setSaved: '已收藏',
+      installT: '用 Skill 安装', installS: 'Claude Code、Codex 只凭编号就能调用任意元素。',
+      searchGo: '回到顶部', searchClear: '清除搜索', searchTry: '试试：', catsPrev: '查看前面的分类', catsNext: '查看更多分类',
+      searchEx: ['价格表', '登录', '图表', '开关', '购物车', '主视觉', '加载', '日历', '文件上传', '通知'],
+      qN: function (n) { return '找到 ' + n + ' 个'; },
+      cbCode: '复制代码', cbCopied: '已复制', cbCopy: '复制',
+      pickClaude: '复制给 Claude', pickCodex: '复制给 Codex', pickCode: '复制代码', pickGroup: '复制给谁', pickCodeName: '代码',
+      aClaude: function (t) { return '复制提示词，让 Claude 加入' + t; },
+      aCodex: function (t) { return '复制提示词，让 Codex 加入' + t; },
+      aCode: function (t) { return '复制' + t + '的代码'; },
+      aSave: function (t) { return '收藏' + t; },
+      aPrompt: function (t) { return t + '，查看提示词和代码'; },
+      cardToLight: '这张卡片用浅色查看', cardToDark: '这张卡片用深色查看',
+      tClaude: '提示词已复制，粘贴到 Claude 里吧', tCodex: '提示词已复制，粘贴到 Codex 里吧',
+      tSaveOn: '已收藏，在左侧「已收藏」里找得到', tSaveOff: '已取消收藏',
+      savedEmptyT: '还没有收藏的元素', savedEmptyS: '点卡片上的书签就会收在这里，只保存在这个浏览器里。', savedEmptyB: '查看全部',
+      refClaude: function (id) { return '[提示] 如果装了 lucian-uxui Skill，在 Claude Code 里用 "/lucian-uxui 把第 ' + id + ' 号元素加进来" 这样按编号调用同一个元素。'; },
+      refCodex: function (id) { return '[提示] 如果装了 lucian-uxui Skill，在 Codex 里用 "$lucian-uxui 把第 ' + id + ' 号元素加进来" 这样按编号调用同一个元素。'; },
+      sets: '合集', setAll: '全部', setNew: '动效', setOld: '界面', newBadge: '新增',
+      count: function (n) { return '<b id="count">' + n + '</b> 个'; },
+      metaTheme: '深色 · 浅色', metaCode: '含代码',
+      cats: '分类',
+      searchOpen: '打开搜索', searchPh: '按钮、图表、登录…', searchLabel: '搜索元素',
+      reelBtn: '全屏滑动浏览', reelLabel: '滑动浏览',
+      toDark: '切换到深色主题', toLight: '切换到浅色主题',
+      autoOn: '自动播放已开启，点一下暂停', autoOff: '自动播放已关闭，点一下继续播放', autoText: '自动播放',
+      grid: 'UI 元素',
+      emptyT: '没有匹配的元素', emptyS: '换个词搜搜，或把分类改回「全部」。', emptyB: '清除搜索',
+      reel: 'UI 元素滑动浏览', hud: '滑动浏览工具', back: '回到网格', backText: '网格',
+      close: '关闭', seg: '切换视图', tabPrompt: '应用提示词', tabCode: '代码',
+      dl: '下载代码文件', copyPrompt: '复制提示词', copyCode: '复制代码',
+      hintPrompt: function (n) { return '提示词 ' + n + ' 字 · 包含完整可运行代码'; },
+      hintCode: function (n) { return '代码 ' + n + ' 字 · 完整可运行的元素代码'; },
+      areaPrompt: '应用提示词', areaCode: '元素代码',
+      guideKick: '使用方法', guideTitle: '这样把它带进你的项目',
+      skillBtn: 'Agent Skill', skillBtnLong: '用 AI Agent 来写 →', skillTitle: '交给 AI Agent',
+      skillLead: '装上 lucian-uxui Skill，Claude Code、Codex 这类编程 Agent 会在这个画廊里找到合适的元素，搬进你的项目。',
+      skillAny: '所有 Agent', skillPlugin: 'Claude Code 插件', copyCmd: '复制命令', tCmdCopied: '已复制',
+      useAsk: '用话说出来', useAskEx: '“用 lucian-uxui Skill 加一个价格切换和 FAQ”',
+      usePick: '按编号选', usePickEx: '“用 lucian-uxui Skill 加第 056 号元素”',
+      useCall: '直接调用', useCallEx: 'Claude Code <code>/lucian-uxui</code>（插件版是 <code>/lucian-uxui:lucian-uxui</code>）· Codex <code>$lucian-uxui</code>',
+      skillMore: '了解更多', skillLine: '用 Agent Skill 调用', skillHow: '安装方法',
+      skillAskId: function (id) { return '用 lucian-uxui Skill 加第 ' + id + ' 号元素'; },
+      guideSteps: [
+        '<b>先看，再亲手点一点。</b>元素出现在屏幕上时会自动循环演示操作。直接点它、或用键盘进去，演示会停下来让你自己操作；松开手过一会儿，又会从头开始演示。',
+        '卡片下面的 <b>Claude</b>·<b>Codex</b> 按钮会复制一段提示词，里面有完整可运行代码和接入说明。粘贴到你项目的 AI 工具里，再告诉它要放在哪里就行。<b>复制代码</b>只复制元素代码本身。',
+        '点卡片名字可以打开查看提示词和代码，用<b>下载代码文件</b>能把独立 HTML 存下来，浅色、深色 Token 都在里面，打开就能用。',
+        '用书签收藏的元素会收在左侧<b>已收藏</b>里（只保存在这个浏览器）。卡片右上角的太阳、月亮按钮只切换这一张卡片的浅色、深色。语言和主题在左下角切换，选好的值下次来还在。'
+      ],
+      guideNote: '开发备注 · 每个元素的样式和脚本只在 <code>.ux</code> 和 <code>.uNNN</code> 前缀内生效。颜色用 <code>--ux-*</code> Token，接到你项目的主题变量上就能用。',
+      open: function (t) { return '放大查看' + t; },
+      railPrompt: '提示词', railCopy: '复制', railCode: '代码',
+      tPromptCopied: '提示词已复制', tCodeCopied: '代码已复制', tSelect: '已选中文字，按 ⌘C 复制',
+      tSaved: '代码文件已保存', tCopyIn: '请在提示词窗口里复制',
+      themeBtn: '切换主题', num: 'zh-CN'
+    },
   };
-  var lang = root.getAttribute('lang') === 'en' ? 'en' : 'ko';
+  var lang = root.getAttribute('lang') === 'en' ? 'en' : root.getAttribute('lang') === 'zh' ? 'zh' : 'ko';
   var t = function (k) { return T[lang][k]; };
-  var catLabel = function (c) { return lang === 'en' ? (CAT_EN[c] || c) : c; };
+  var catLabel = function (c) { return lang === 'en' ? (CAT_EN[c] || c) : lang === 'zh' ? (CAT_ZH[c] || c) : c; };
   /*@I18N_CORE@*/
-  // 현재 언어의 제목·설명·코드. 영어 코드는 처음 쓸 때 한 번 만들어 둡니다
+  // 현재 언어의 제목·설명·코드. 영어·중국어 코드는 처음 쓸 때 한 번 만들어 둡니다
   function loc(it) {
-    if (lang !== 'en' || !it.en) return { title: it.title, summary: it.summary, hint: it.hint, category: it.category, html: it.html, js: it.js };
-    if (!it._en) it._en = { html: uxLocalize(it.html, 'html', it.en.map), js: uxLocalize(it.js, 'js', it.en.map) };
-    return { title: it.en.title, summary: it.en.summary, hint: it.en.hint, category: catLabel(it.category), html: it._en.html, js: it._en.js };
+    if (lang === 'en' && it.en) {
+      if (!it._en) it._en = { html: uxLocalize(it.html, 'html', it.en.map), js: uxLocalize(it.js, 'js', it.en.map) };
+      return { title: it.en.title, summary: it.en.summary, hint: it.en.hint, category: catLabel(it.category), html: it._en.html, js: it._en.js };
+    }
+    if (lang === 'zh' && it.zh) {
+      if (!it._zh) it._zh = { html: uxLocalize(it.html, 'html', it.zh.map), js: uxLocalize(it.js, 'js', it.zh.map) };
+      return { title: it.zh.title, summary: it.zh.summary, hint: it.zh.hint, category: catLabel(it.category), html: it._zh.html, js: it._zh.js };
+    }
+    return { title: it.title, summary: it.summary, hint: it.hint, category: it.category, html: it.html, js: it.js };
   }
 
   /* ---------- 테마 ---------- */
@@ -249,7 +352,7 @@
   // 그래서 요소 CSS는 카드에 붙일 때마다 넣지 않고 공용 시트에 요소당 한 번만 등록합니다. 등록이 필요할 때는
   // 그때까지 받아 둔 요소를 모두 한 번에 넣어, 스크롤 중 시트를 바꾸는 횟수를 줄입니다
   var STYLE_RE = /<style>([\s\S]*?)<\/style>/, cssKey = {}, cssText = {};
-  function cssLang(it) { return lang === 'en' && it.en ? 'en' : 'ko'; }
+  function cssLang(it) { return lang === 'en' && it.en ? 'en' : lang === 'zh' && it.zh ? 'zh' : 'ko'; }
   function regCss(list) {
     var buf = '';
     list.forEach(function (it) {
@@ -872,10 +975,11 @@
   CATS.sort(function (a, b) { return ciOf(a) - ciOf(b); });
   var activeCat = '전체';
   var query = '';
-  // 한국어·영어 어느 쪽으로 찾아도 걸리도록 두 언어를 함께 넣어 둡니다
+  // 한국어·영어·중국어 어느 쪽으로 찾아도 걸리도록 세 언어를 함께 넣어 둡니다
   var HAY = ITEMS.map(function (it) {
     var en = it.en || {};
-    return [it.id, it.title, it.summary, it.category, CAT_EN[it.category] || '', it.tags.join(' '), en.title || '', en.summary || '', it.set === 3 ? 'new 신규 새로운 필수 essential' : ''].join(' ').toLowerCase();
+    var zh = it.zh || {};
+    return [it.id, it.title, it.summary, it.category, CAT_EN[it.category] || '', CAT_ZH[it.category] || '', it.tags.join(' '), en.title || '', en.summary || '', zh.title || '', zh.summary || '', it.set === 3 ? 'new 신규 새로운 필수 essential' : ''].join(' ').toLowerCase();
   });
   var visible = [];
   function computeVisible() {
@@ -1419,6 +1523,29 @@
       '',
       '[Insertion point] Write the page or component name here',
       '[Replacement target] Write the file path or component name of the existing element, or "none"'
+    ].join('\n'),
+    zh: [
+
+      '请把下面的 UI 元素加进我的项目。',
+      '',
+      '[先确认]',
+      '1. 先确认项目的框架（React、Next、Vue、Svelte、纯 HTML 等）、样式方式（CSS Modules、Tailwind、全局 CSS）和现有主题方式（data-theme、dark class、CSS 变量）。',
+      '2. 先找到插入位置的文件和已有元素，并说明那个元素在哪里被用到。',
+      '',
+      '[接入方法]',
+      '3. 在插入位置作为新组件加入。如果有要替换的对象，就用下面的元素替换它。',
+      '4. 现有数据、props、事件处理、表单值和无障碍属性（标签、aria、键盘操作）保持原样。',
+      '5. 按下面代码的结构、形态和动效数值（时长、曲线、延迟）原样搬运。按框架改成组件和状态，但不要凭空改设计。',
+      '6. 把下面的 --ux-* 颜色 Token 接到项目现有的主题变量上。浅色和深色两个值都要保留，两个主题都要检查。',
+      '7. 样式只放在这个元素的 class（.uNNN）里，不要改全局 CSS 或全局脚本。注意 class 名不要和现有元素冲突。',
+      '8. 示例文案和示例数据换成项目的真实数据。不要带走画廊专用的页面和演示代码。代码顶部的 License 注释一行要留在新组件文件的顶部。',
+      '9. 开启 prefers-reduced-motion 时，功能和最终状态也要照常工作，请检查。',
+      '',
+      '[完成报告]',
+      '10. 告诉我改了哪些文件、和原来相比行为有什么不同、检查了哪些范围（两个主题、移动端宽度、键盘），以及哪些没能检查。',
+      '',
+      '[插入位置] 在这里写页面或组件名',
+      '[替换对象] 写要替换的文件路径或组件名，没有就写“无”'
     ].join('\n')
   };
   // 복사·다운로드되는 코드 맨 위에 붙는 출처·라이선스 한 줄
@@ -1439,6 +1566,15 @@
         '--- Code start (this whole code is the working original) ---\n' +
         codeOf(it) +
         '--- Code end ---\n';
+    }
+    if (lang === 'zh') {
+      return '[元素] ' + c.title + ' (' + it.id + ', ' + c.category + ')\n' +
+        '[元素说明] ' + c.summary + '\n' +
+        (c.hint ? '[操作] ' + c.hint + '\n' : '') + '\n' +
+        GUIDE.zh + '\n\n' +
+        '--- 代码开始（下面整段代码就是可直接运行的原版代码） ---\n' +
+        codeOf(it) +
+        '--- 代码结束 ---\n';
     }
     return '[요소] ' + c.title + ' (' + it.id + ', ' + c.category + ')\n' +
       '[요소 설명] ' + c.summary + '\n' +
@@ -1490,7 +1626,7 @@
     var url = URL.createObjectURL(blob);
     var a = document.createElement('a');
     a.href = url;
-    a.download = 'ux-' + it.id + '-' + it.slug + (lang === 'en' ? '-en' : '') + '.html';
+    a.download = 'ux-' + it.id + '-' + it.slug + (lang === 'en' ? '-en' : lang === 'zh' ? '-zh' : '') + '.html';
     body.appendChild(a);
     a.click();
     a.remove();
@@ -1831,7 +1967,7 @@
     syncSearchUi();
   }
   function setLang(next) {
-    if (next !== 'ko' && next !== 'en') return;
+    if (next !== 'ko' && next !== 'en' && next !== 'zh') return;
     store.set(LANG_KEY, next);
     if (next === lang) return;
     lang = next;

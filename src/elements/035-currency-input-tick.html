@@ -16,6 +16,7 @@
   ["v.toLocaleString('ko-KR')", "v.toLocaleString('en-US')"],
   ["보내기", "Send"]
 ]} -->
+<!-- @zh {"title": "转账金额输入", "summary": "输入时只有变化的数字会从下面弹出来，千分位分隔符自然出现。点下面的快捷金额可以累加，超过余额金额会变红晃一下，并禁用发送。", "hint": "输入金额或点下面的快捷金额，试试超过余额", "map": [["<b>김서연</b>님에게 보내기", "发送给 <b>Seoyeon Kim</b>"], ["보낼 금액", "转账金额"], ["통화 바꾸기: 원화", "切换货币：韩元"], ["<span>원</span><span>$</span>", "<span>¥</span><span>$</span>"], ["+1만", "+1万"], ["+5만", "+5万"], ["+10만", "+10万"], ["전액", "全部"], ["'잔액보다 ' + (won - BAL).toLocaleString('ko-KR') + '원 많아요'", "'¥' + (won - BAL).toLocaleString('zh-CN') + ' 超出余额'"], ["'보낸 뒤 잔액 ' + (BAL - won).toLocaleString('ko-KR') + '원'", "'发送后余额：¥' + (BAL - won).toLocaleString('zh-CN')"], ["'통화 바꾸기: ' + (usd ? '달러' : '원화')", "'切换货币：' + (usd ? '美元' : '韩元')"], ["send.textContent = (usd ? '$' + (won / RATE).toFixed(2) : won.toLocaleString('ko-KR') + '원') + ' 보냈어요';", "send.textContent = '已发送 ' + (usd ? '$' + (won / RATE).toFixed(2) : '¥' + won.toLocaleString('zh-CN'));"], ["v.toLocaleString('ko-KR')", "v.toLocaleString('zh-CN')"], ["보내기", "发送"]]} -->
 <style>
 .u035{position:relative;width:340px;height:340px;display:flex;flex-direction:column;align-items:center}
 .u035-to{display:flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border-radius:999px;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line);font-size:14px;font-weight:650;color:var(--ux-ink-2)}

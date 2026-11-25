@@ -11,6 +11,49 @@
   ["'섬 지역은 배편으로 하루 더 걸려요'", "'Island addresses take one more day by ferry'"],
   ["aria-label=\"배송지 바꾸기\"", "aria-label=\"Change address\""]
 ]} -->
+<!-- @zh {
+  "title": "带截单时间的配送承诺",
+  "summary": "商品页的配送说明会按秒倒数“1 小时 23 分内下单，明天送达”，下面的小条随着离当天截单时间越来越近而缩短。把地址换到济州岛，标题会变成后天送达，倒数换成一句话说明，下面的配送步骤里还会滑进来一步“渡轮”，卡车要多走一段。",
+  "hint": "点地址按钮，切换地区",
+  "map": [
+    [
+      ">배송지<",
+      ">收货地址<"
+    ],
+    [
+      "var RG = [['서울 강남구', 1], ['부산 해운대구', 1], ['제주 제주시', 2]]",
+      "var RG = [['首尔江南区', 1], ['釜山海云台区', 1], ['济州市', 2]]"
+    ],
+    [
+      "var DAY = ['', '내일(목) 도착 보장', '모레(금) 도착 예정'], SHORT = ['', '내일 도착', '모레 도착']",
+      "var DAY = ['', '明天（周四）送达', '后天（周五）送达'], SHORT = ['', '明天', '后天']"
+    ],
+    [
+      "var ST = [['주문', 0], ['오늘 출발', 0], ['배편', 2], ['도착', 0]]",
+      "var ST = [['下单', 0], ['今天发出', 0], ['渡轮', 2], ['送达', 0]]"
+    ],
+    [
+      "'시간 '",
+      "' 小时 '"
+    ],
+    [
+      "'분 '",
+      "' 分 '"
+    ],
+    [
+      "'초 안에 주문하면'",
+      "' 秒内下单'"
+    ],
+    [
+      "'섬 지역은 배편으로 하루 더 걸려요'",
+      "'岛上地址要坐渡轮，多花一天'"
+    ],
+    [
+      "aria-label=\"배송지 바꾸기\"",
+      "aria-label=\"更换收货地址\""
+    ]
+  ]
+} -->
 <style>
 .u265{position:relative;width:340px;height:340px;border-radius:30px;overflow:hidden;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);color:var(--ux-ink)}
 .u265-cd{position:absolute;left:18px;right:18px;top:20px;padding:16px;border-radius:20px;background:var(--ux-surface-2);box-shadow:inset 0 0 0 1px var(--ux-line)}

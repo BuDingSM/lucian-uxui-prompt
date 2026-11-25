@@ -14,6 +14,61 @@
   ["'해독 완료'", "'Decoded'"],
   [">해독 완료<", ">Decoded<"]
 ]} -->
+<!-- @zh {
+  "title": "乱码解码标题",
+  "summary": "切换句子时，每个字母格会先快速闪过随机符号，再从左到右一个个落定。把鼠标悬停在标题上可以再乱码解码一次，还可以从三种解码速度里挑一种。",
+  "hint": "用下面的数字切换句子，或把鼠标悬停在标题上；再到右边换速度",
+  "map": [
+    [
+      "var LINES = ['보이지 않던 신호를 읽어 냅니다', '흩어진 데이터가 이야기가 됩니다', '복잡한 일을 한 줄로 정리합니다'];",
+      "var LINES = ['我们能读出藏在噪声里的信号', '零散的数据变成了一个故事', '复杂的工作，浓缩成一句话'];"
+    ],
+    [
+      "aria-label=\"문장 고르기\"",
+      "aria-label=\"选句子\""
+    ],
+    [
+      "aria-label=\"해독 속도\"",
+      "aria-label=\"解码速度\""
+    ],
+    [
+      "aria-label=\"첫 번째 문장\"",
+      "aria-label=\"第一句\""
+    ],
+    [
+      "aria-label=\"두 번째 문장\"",
+      "aria-label=\"第二句\""
+    ],
+    [
+      "aria-label=\"세 번째 문장\"",
+      "aria-label=\"第三句\""
+    ],
+    [
+      ">느리게<",
+      ">慢<"
+    ],
+    [
+      ">보통<",
+      ">适中<"
+    ],
+    [
+      ">빠르게<",
+      ">快<"
+    ],
+    [
+      "'해독 중'",
+      "'解码中'"
+    ],
+    [
+      "'해독 완료'",
+      "'已解码'"
+    ],
+    [
+      ">해독 완료<",
+      ">已解码<"
+    ]
+  ]
+} -->
 <style>
 .u245{position:relative;width:340px;height:296px;display:flex;flex-direction:column;padding:22px 20px 18px;border-radius:28px;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);overflow:hidden}
 .u245::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 3px,color-mix(in srgb,var(--ux-ink) 3.5%,transparent) 3px 4px)}

@@ -1,5 +1,5 @@
 <!-- @meta {"title":"프롬프트 입력창","category":"입력·검색","summary":"AI 앱의 프롬프트 상자입니다. 글을 쓰면 상자가 줄 수에 맞춰 위로 부드럽게 늘어나고 보내기 버튼이 깨어납니다. 보내면 글이 위로 날아가고 화살표가 정지 네모로 바뀌며 테두리를 따라 얇은 빛이 돌다가, 답이 끝나면 다시 화살표로 돌아옵니다. 모델 알약을 누르면 모델 이름이 굴러 바뀝니다.","hint":"질문을 쓰고 Enter나 보내기 버튼을 눌러 보세요","shape":"square","hue":"#7B61FF","hue2":"#22C3A6","tags":["ai","prompt","chat-input","textarea","auto-grow","send","stop"]} -->
-<!-- @demo [["wait",600],["type",".u452-ta",0,{"ko":"다음 주 제주도 2박 3일 여행 일정을 맛집 위주로 짜 줘","en":"Plan a 3-day food trip to Jeju for next week"},45],["wait",350],["tap",".u452-send",0,{"after":2900}],["leave",200]] -->
+<!-- @demo [["wait",600],["type",".u452-ta",0,{"ko":"다음 주 제주도 2박 3일 여행 일정을 맛집 위주로 짜 줘","en":"Plan a 3-day food trip to Jeju for next week","zh":"帮我规划下周去济州岛的 3 天美食之旅"},45],["wait",350],["tap",".u452-send",0,{"after":2900}],["leave",200]] -->
 <!-- @en {"title":"AI prompt box","summary":"The prompt box of an AI app. As you write, the box grows upward line by line and the send button wakes up. Send and your text flies up, the arrow morphs into a stop square and a thin light runs around the border; when the answer is done it turns back into an arrow. Tap the model pill and the model name rolls over.","hint":"Write a question, then press Enter or the send button","map":[
   ["aria-label=\"프롬프트\"", "aria-label=\"Prompt\""],
   ["placeholder=\"무엇이든 물어보세요\"", "placeholder=\"Ask anything\""],
@@ -12,6 +12,19 @@
   ["'답변이 끝났어요'", "'Response complete'"],
   ["'생성을 멈췄어요'", "'Generation stopped'"],
   ["'모델: '", "'Model: '"]
+]} -->
+<!-- @zh {"title":"AI 提问框", "summary":"一个 AI 应用的提问框。边写边看：框子一行行往上长，发送按钮醒过来。发送后，你的文字飞上去，箭头变成停止方块，一道细光绕着边框跑；回答完了又变回箭头。点模型小药丸，模型名字会滚动切换。", "hint":"写个问题，再按回车或点发送按钮", "map":[
+  ["aria-label=\"프롬프트\"", "aria-label=\"提示词\""],
+  ["placeholder=\"무엇이든 물어보세요\"", "placeholder=\"想问什么都可以\""],
+  ["aria-label=\"파일 첨부\"", "aria-label=\"添加文件\""],
+  ["aria-label=\"모델: Nova 2\"", "aria-label=\"模型：Nova 2\""],
+  ["aria-label=\"보내기\"", "aria-label=\"发送\""],
+  ["'보내기'", "'发送'"],
+  ["'생성 중지'", "'停止生成'"],
+  ["'답변을 만드는 중'", "'正在生成回答'"],
+  ["'답변이 끝났어요'", "'回答完成'"],
+  ["'생성을 멈췄어요'", "'已停止生成'"],
+  ["'모델: '", "'模型：'"]
 ]} -->
 <style>
 @property --u452-a{syntax:'<angle>';inherits:false;initial-value:0deg}

@@ -12,6 +12,18 @@
   ["view: function (n) { return n + ' 보기'; }", "view: function (n) { return 'View ' + n; }"],
   ["done: '약관에 동의했어요'", "done: 'Terms accepted'"]
 ]} -->
+<!-- @zh {"title":"条款确认", "summary":"一张确认单，只有“全部同意”和三条条款。勾上“全部同意”，对勾会顺着列表一个个画下来；两条必填项都勾上，“同意并继续”按钮就从左到右亮起来。只选一部分时，“全部同意”会显示半勾。", "hint":"先点“全部同意”，再一个个取消", "map":[
+  [">전체 동의<", ">全部同意<"],
+  [">필수<", ">必填<"],
+  [">선택<", ">选填<"],
+  [">이용약관<", ">服务条款<"],
+  [">개인정보 수집·이용<", ">个人信息收集与使用<"],
+  [">마케팅 정보 수신<", ">接收营销信息<"],
+  [">동의하고 계속<", ">同意并继续<"],
+  [">동의했어요<", ">已同意<"],
+  ["view: function (n) { return n + ' 보기'; }", "view: function (n) { return '查看' + n; }"],
+  ["done: '약관에 동의했어요'", "done: '已同意条款'"]
+]} -->
 <style>
 .u411{position:relative;width:340px;height:300px;display:grid;place-items:center}
 .u411-s{width:284px;padding:12px;border-radius:22px;background:#FFFFFF;background:light-dark(#FFFFFF,var(--ux-surface-2));box-shadow:0 0 0 1px var(--ux-line),0 22px 46px -26px var(--ux-shadow-strong),0 2px 6px -2px var(--ux-shadow)}

@@ -7,6 +7,33 @@
   ["aria-label=\"블록, 좌우로 끌었다 놓기\"", "aria-label=\"Block, drag sideways and release\""],
   ["aria-label=\"프리셋\"", "aria-label=\"Presets\""]
 ]} -->
+<!-- @zh {
+  "title": "弹簧调校台",
+  "summary": "拉开墙上弹簧末端的方块再松手，它会按你设好的刚度和阻尼弹跳，下面的曲线实时画出它的位置。越硬震得越快，阻尼越小晃得越久。点预设，滑块会滑到对应数值，方块立刻演示给你看。",
+  "hint": "把方块横向拉开松手，或换预设、调滑块",
+  "map": [
+    [
+      "var PRE = [['통통', 420, 6], ['부드럽게', 120, 14], ['단단하게', 600, 48]];",
+      "var PRE = [['弹跳', 420, 6], ['轻柔', 120, 14], ['干脆', 600, 48]];"
+    ],
+    [
+      ">강성<",
+      ">刚度<"
+    ],
+    [
+      ">감쇠<",
+      ">阻尼<"
+    ],
+    [
+      "aria-label=\"블록, 좌우로 끌었다 놓기\"",
+      "aria-label=\"方块，横向拉开松手\""
+    ],
+    [
+      "aria-label=\"프리셋\"",
+      "aria-label=\"预设\""
+    ]
+  ]
+} -->
 <style>
 .u316{position:relative;width:340px;height:350px;padding:16px;box-sizing:border-box;border-radius:30px;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);overflow:hidden;color:var(--ux-ink)}
 .u316-tr{position:relative;height:74px;border-radius:16px;background:var(--ux-surface-2)}
